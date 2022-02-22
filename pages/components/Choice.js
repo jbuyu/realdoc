@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Choice = () => (
-  <div className="max-w-8xl mx-auto  bg-[url('/sprinkle.svg')] bg-auto bg-center bg-no-repeat pt-8 ">
+  <div className="max-w-8xl mx-auto  bg-[url('/sprinkle.svg')] bg-center bg-no-repeat pt-8 bg-cover ">
     <div className="bg-[url('/lightblob.svg ')]bg-center flex items-center justify-between   ">
       <div className="relative flex w-3/5 flex-col items-center justify-center">
         <div className="w-2/3 text-2xl font-extrabold">
