@@ -18,7 +18,9 @@ const NavBar = () => (
             </div>
           </Link>
           <Link className="cursor-pointer" href="/about">
-            Team
+            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
+              Team
+            </div>
           </Link>
         </div>
         <div className="w-1/5">
