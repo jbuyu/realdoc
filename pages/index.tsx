@@ -11,7 +11,7 @@ export default function Home() {
       {/* <Header /> */}
       <Body />
       <Choice />
-      <Wave />
+      {/* <Wave /> */}
       {/* <Footer /> */}
     </div>
   )
