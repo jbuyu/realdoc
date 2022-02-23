@@ -7,12 +7,12 @@ import Wave from './components/Wave'
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col justify-center font-mono text-slate-700 ">
-      <Header />
-      <NavBar />
+      {/* <NavBar /> */}
+      {/* <Header /> */}
       <Body />
       <Choice />
       <Wave />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
