@@ -12,16 +12,22 @@ const NavBar = () => (
           </div>
         </Link>
         <div className="flex w-2/5 justify-around  ">
-          <Link href="/">
-            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
-              Services
-            </div>
-          </Link>
-          <Link className="cursor-pointer" href="/about">
+        <Link className="cursor-pointer" href="/team">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Team
             </div>
           </Link>
+          <Link href="/about">
+            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
+              About us
+            </div>
+          </Link>
+          <Link href="/services">
+            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
+              Services
+            </div>
+          </Link>
+          
         </div>
         <div className="w-1/5">
           <button className="rounded-full bg-indigo-600 py-2 px-6 font-bold text-white hover:bg-indigo-700">
