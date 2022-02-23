@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const Hero = () => (
   <div className="h-128">
     <div className="mx-auto flex max-w-7xl justify-between">
@@ -18,7 +19,9 @@ const Hero = () => (
         </div>
         <div className="pt-4">
           <button className="inline-flex rounded bg-indigo-500 py-2 px-4 font-bold text-white hover:bg-indigo-700">
-            <span>Book Appointment</span>
+            <Link href="/Form">
+              <span>Book Appointment</span>
+            </Link>
           </button>
         </div>
       </div>

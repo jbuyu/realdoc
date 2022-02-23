@@ -12,17 +12,17 @@ const NavBar = () => (
           </div>
         </Link>
         <div className="flex w-2/5 justify-around  ">
-        <Link className="cursor-pointer" href="/team">
+        <Link className="cursor-pointer" href="/Team">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Team
             </div>
           </Link>
-          <Link href="/about">
+          <Link href="/About">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               About us
             </div>
           </Link>
-          <Link href="/services">
+          <Link href="/Services">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Services
             </div>
