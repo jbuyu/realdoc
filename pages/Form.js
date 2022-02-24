@@ -64,7 +64,7 @@ export default function Form() {
             }) => (
               <form
                 onSubmit={handleSubmit}
-                className="absolute top-0 right-0 mt-4 mr-12 flex w-2/5 flex-col justify-center rounded-xl bg-white p-8 border-x-2 border-indigo-200"
+                className="absolute top-0 right-0 mt-4 mr-12 flex w-2/5 flex-col justify-center rounded-xl border-x-2 border-indigo-200 bg-white p-8"
               >
                 <div className="">
                   <input
@@ -198,11 +198,16 @@ export default function Form() {
                 </div>
                 <div className="mt-8">
                   <button
+                    disabled={isSubmitting}
                     type="submit"
                     disabled={isSubmitting}
                     role="button"
                     aria-label="create my account"
-                    className="w-full rounded border bg-indigo-700 py-4 text-sm font-semibold leading-none text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2"
+                    className={
+                      isSubmitting
+                        ? 'w-full rounded border bg-indigo-400 py-4 text-sm font-semibold leading-none text-white opacity-50 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
+                        : 'w-full rounded border bg-indigo-700 py-4 text-sm font-semibold leading-none text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
+                    }
                   >
                     Submit
                   </button>
