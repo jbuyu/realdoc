@@ -7,7 +7,7 @@ class Layout extends Component {
   render() {
     const { children } = this.props;
     return (
-      <div className="layout">
+      <div className="h-full">
         <Header />
         <NavBar />
         {children}
