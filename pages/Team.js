@@ -1,14 +1,17 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Team = () => (
   <div className="max-w-8xl mx-auto flex flex-col  bg-[url('/bgpattern4.svg')] bg-cover bg-no-repeat ">
     <div className="mt-10 flex flex-wrap justify-around px-20 text-gray-900">
       <div className="pt-4">
-        <div className="h-80 w-130">
-          <img
+        <div className="h-64 w-130">
+          <Image
             src="/doc0.jpeg"
-            alt=" random imgee"
+            alt=" random Imageee"
             class="w-full rounded-lg object-cover object-center shadow-md"
+            width={352}
+            height={456}
           />
         </div>
         <div class="relative mt-36 px-10 ">
@@ -31,11 +34,13 @@ const Team = () => (
         </div>
       </div>
       <div className="pt-4">
-        <div className="h-80 w-130">
-          <img
+        <div className="h-64 w-130">
+          <Image
             src="/doc1.jpeg"
-            alt=" random imgee"
+            alt=" random Imageee"
             class="w-full rounded-lg object-cover object-center shadow-md"
+            width={352}
+            height={456}
           />
         </div>
         <div class="relative mt-36 px-10 ">
@@ -58,11 +63,13 @@ const Team = () => (
         </div>
       </div>
       <div className="pt-4">
-        <div className="h-80 w-130">
-          <img
+        <div className="h-64 w-130">
+          <Image
             src="/doc2.jpeg"
-            alt=" random imgee"
+            alt=" random Imageee"
             class="w-full rounded-lg object-cover object-center shadow-md"
+            width={352}
+            height={456}
           />
         </div>
         <div class="relative mt-36 px-10 ">
@@ -85,11 +92,13 @@ const Team = () => (
         </div>
       </div>
       <div className="pt-4">
-        <div className="h-80 w-130">
-          <img
+        <div className="h-64 w-130">
+          <Image
             src="/doc3.jpeg"
-            alt=" random imgee"
+            alt=" random Imageee"
             class="w-full rounded-lg object-cover object-center shadow-md"
+            width={352}
+            height={456}
           />
         </div>
 
@@ -113,11 +122,13 @@ const Team = () => (
         </div>
       </div>
       <div className="pt-4">
-        <div className="h-80 w-130">
-          <img
+        <div className="h-64 w-130">
+          <Image
             src="/doc4.jpeg"
-            alt=" random imgee"
+            alt=" random Imageee"
             class="w-full rounded-lg object-cover object-center shadow-md"
+            width={352}
+            height={456}
           />
         </div>
 
@@ -141,11 +152,13 @@ const Team = () => (
         </div>
       </div>
       <div className="pt-4">
-        <div className="h-80 w-130">
-          <img
+        <div className="h-64 w-130">
+          <Image
             src="/doc5.jpeg"
-            alt=" random imgee"
+            alt=" random Imageee"
             class="w-full rounded-lg object-cover object-center shadow-md"
+            width={352}
+            height={456}
           />
         </div>
         <div class="relative mt-36 px-10 ">
