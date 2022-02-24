@@ -12,6 +12,7 @@ const Team = () => (
             class="w-full rounded-lg object-cover object-center shadow-md"
             width={352}
             height={456}
+            layout="fixed"
           />
         </div>
         <div class="relative mt-36 px-10 ">
@@ -41,6 +42,7 @@ const Team = () => (
             class="w-full rounded-lg object-cover object-center shadow-md"
             width={352}
             height={456}
+            layout="fixed"
           />
         </div>
         <div class="relative mt-36 px-10 ">
@@ -70,6 +72,7 @@ const Team = () => (
             class="w-full rounded-lg object-cover object-center shadow-md"
             width={352}
             height={456}
+            layout="fixed"
           />
         </div>
         <div class="relative mt-36 px-10 ">
@@ -99,6 +102,7 @@ const Team = () => (
             class="w-full rounded-lg object-cover object-center shadow-md"
             width={352}
             height={456}
+            layout="fixed"
           />
         </div>
 
@@ -129,6 +133,7 @@ const Team = () => (
             class="w-full rounded-lg object-cover object-center shadow-md"
             width={352}
             height={456}
+            layout="fixed"
           />
         </div>
 
@@ -159,6 +164,7 @@ const Team = () => (
             class="w-full rounded-lg object-cover object-center shadow-md"
             width={352}
             height={456}
+            layout="fixed"
           />
         </div>
         <div class="relative mt-36 px-10 ">
