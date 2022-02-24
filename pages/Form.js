@@ -9,7 +9,7 @@ export default function Form() {
 
   return (
     <div className="mx-auto flex h-140 max-w-7xl flex-col">
-      <div className="h-80 items-center rounded-b-3xl bg-indigo-600 text-xl text-white">
+      <div className="h-80 items-center rounded-b-3xl bg-indigo-600 text-xl text-white ">
         <div className="relative">
           <div className="flex h-80 w-1/2 flex-col items-start justify-center p-8">
             <div className="ont-semibold text-3xl">
@@ -64,7 +64,7 @@ export default function Form() {
             }) => (
               <form
                 onSubmit={handleSubmit}
-                className="absolute top-0 right-0 mt-4 mr-12 flex w-2/5 flex-col justify-center rounded-xl bg-white p-8"
+                className="absolute top-0 right-0 mt-4 mr-12 flex w-2/5 flex-col justify-center rounded-xl bg-white p-8 border-x-2 border-indigo-200"
               >
                 <div className="">
                   <input
