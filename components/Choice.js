@@ -25,12 +25,12 @@ const Choice = () => (
           </button>
         </div>
       </div>
-      <div className="flex w-2/5 flex-col  items-center justify-center ">
+      <div className="flex w-2/5 flex-col  items-center justify-center">
         <div className="flex w-full p-4">
           <div className=" flex-start flex ">
             <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
               <div className="flex flex-col items-center justify-center">
-                <img src="/professional.png" alt="" className="w-56" />
+                <img src="/professional.png" alt="" className="w-72" />
                 <div className="font-semibold">24/7 Patient Support </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Choice = () => (
           <div className="flex items-end justify-items-end">
             <div className=" max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
               <div className="flex  flex-col items-center justify-center ">
-                <img src="/caring.png" alt="" className="w-56" />
+                <img src="/caring.png" alt="" className="w-72" />
                 <div className="font-semibold">Prompt results & analysis</div>
               </div>
             </div>
@@ -50,7 +50,7 @@ const Choice = () => (
           <div className="flex-start flex">
             <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
               <div className="flex flex-col items-center justify-center ">
-                <img src="/notes.png" alt="" className="w-56" />
+                <img src="/notes.png" alt="" className="w-72" />
                 <div className="font-semibold">Proffesional Doctors</div>
               </div>
             </div>

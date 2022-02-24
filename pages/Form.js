@@ -8,7 +8,7 @@ export default function Form() {
   const [startDate, setStartDate] = useState(new Date())
 
   return (
-    <div className="mx-auto flex h-140 max-w-7xl flex-col">
+    <div className="mx-auto flex h-140 max-w-9xl flex-col">
       <div className="h-80 items-center rounded-b-3xl bg-indigo-600 text-xl text-white ">
         <div className="relative">
           <div className="flex h-80 w-1/2 flex-col items-start justify-center p-8">
@@ -78,7 +78,7 @@ export default function Form() {
                     type="text"
                     className=" font-sm w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
                   />
-                  <div className="text-sm text-red-400">
+                  <div className="text-sm text-red-600">
                     {errors.firstname && touched.firstname && errors.firstname}
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function Form() {
                     type="text"
                     className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
                   />
-                  <div className="text-sm text-red-400">
+                  <div className="text-sm text-red-600">
                     {errors.lastname && touched.lastname && errors.lastname}
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function Form() {
                     role="input"
                     className="font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
                   />
-                  <div className="text-sm text-red-400">
+                  <div className="text-sm text-red-600">
                     {errors.email && touched.email && errors.email}
                   </div>
                 </div>
