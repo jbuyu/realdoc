@@ -13,9 +13,9 @@ const Choice = () => (
           care. In this era where hospitals are hot spots for the spread of
           infectious diseases, we give you a feasible alternative to have
           quality medical care at the comfort of your home.
-          <div className=" absolute top-20 left-12 opacity-30">
+          {/* <div className=" absolute top-20 left-12 opacity-30">
             <img src="/dots.svg" alt="" className="w-1/3" />
-          </div>
+          </div> */}
         </div>
         <div className="w-2/3 pt-4">
           <button className="hover:-translate-1 inline-flex rounded bg-indigo-500 py-2 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-700">
