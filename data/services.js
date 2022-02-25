@@ -3,19 +3,19 @@ const servicesArray = [
     icon: '/consul.svg',
     title: 'General Consultations',
     description:
-      'Source for Medical consultations from our team of world leading medical professionals.',
+      'Source Medical consultation from our team of medical professionals.',
   },
   {
     icon: '/homecare.svg',
     title: 'Homecare',
     description:
-      'Our doctors are flexible and will readily get to your location if the need fits.',
+      'Our doctors are flexible and will readily get to your location.',
   },
   {
     icon: '/laboratory.svg',
     title: 'Laboratory',
     description:
-      'we have state of the art laboratories for tests  and  prompt results.',
+      'we have modern laboratories for tests  and  prompt results.',
   },
   {
     icon: '/nutrition.svg',
