@@ -18,6 +18,9 @@ module.exports = {
       maxWidth: {
         '9xl': '96rem',
       },
+      borderRadius:{
+        '4xl':"2rem",
+      },
     },
   },
   plugins: [],

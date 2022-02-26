@@ -12,14 +12,9 @@ const NavBar = () => (
           </div>
         </Link>
         <div className="flex w-2/5 justify-around  ">
-        <Link className="cursor-pointer" href="/Team">
+          <Link className="cursor-pointer" href="/Team">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Team
-            </div>
-          </Link>
-          <Link href="/About">
-            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
-              About us
             </div>
           </Link>
           <Link href="/Services">
@@ -27,7 +22,11 @@ const NavBar = () => (
               Services
             </div>
           </Link>
-          
+          <Link href="/About">
+            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
+              About us
+            </div>
+          </Link>
         </div>
         <div className="w-1/5">
           <button className="rounded-full bg-indigo-600 py-2 px-6 font-bold text-white hover:bg-indigo-700">
