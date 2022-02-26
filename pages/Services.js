@@ -11,8 +11,8 @@ const Services = () => (
         We provide state of the art medical care for all our patients.
       </div>
       <div className="flex flex-wrap items-center justify-center">
-        {servicesArray.map(({ icon, title, description }) => (
-          <div className="m-8 flex h-84 w-80 flex-col items-center  justify-center rounded-3xl p-4">
+        {servicesArray.map(({id, icon, title, description }) => (
+          <div key={id} className="m-8 flex h-84 w-80 flex-col items-center  justify-center rounded-3xl p-4">
             <div className="flex h-56 w-56 items-center justify-center rounded-xl bg-gray-50 ">
               <Image src={icon} width={124} height={124} layout="fixed" />
             </div>
