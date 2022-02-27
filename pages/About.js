@@ -53,11 +53,24 @@ const About = () => (
       <div className="  py-4 text-2xl font-extrabold text-[#224E73]">
         Feedback and Testimonials
       </div>
-      <div className="flex flex-wrap px-2">
+      <div className="mt-12 flex w-full space-x-20">
+        {testimonialArray.map(({ id, icon, comment, name, image }) => (
+          <div
+            key={id}
+            className="flex h-60 flex-col  justify-around rounded-3xl bg-[#EEF2FF] p-4 "
+          >
+            <Image src={icon} alt="" width={16} height={16} layout="fixed" />
+            <div>{comment}</div>
+            <div className="flex items-center space-x-4">
+              <Image src={image} alt="" width={30} height={30} layout="fixed" />
+              <div className="flex justify-center items-center pt-1">
 
-
+              {name}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      
     </div>
   </div>
 )

@@ -77,6 +77,15 @@ const testimonialArray = [
   {
     id: 1,
     icon: '/quotes.svg',
+    image: '/female.png',
+    comment:
+      "Amazing customer service. I'm impressed by how genuinely I was treated.",
+    name: 'Mercy',
+  },
+  {
+    id: 1,
+    icon: '/quotes.svg',
+    image: '/male.png',
     comment:
       "Amazing customer service. I'm impressed by how genuinely I was treated.",
     name: 'Andrew',
@@ -84,23 +93,18 @@ const testimonialArray = [
   {
     id: 1,
     icon: '/quotes.svg',
+    image: '/female.png',
     comment:
       "Amazing customer service. I'm impressed by how genuinely I was treated.",
-    name: 'AndMorielrew',
+    name: 'Auriel',
   },
   {
     id: 1,
     icon: '/quotes.svg',
+    image: '/male.png',
     comment:
       "Amazing customer service. I'm impressed by how genuinely I was treated.",
     name: 'Lanton',
-  },
-  {
-    id: 1,
-    icon: '/quotes.svg',
-    comment:
-      "Amazing customer service. I'm impressed by how genuinely I was treated.",
-    name: 'Brian',
   },
 ]
 
