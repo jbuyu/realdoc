@@ -59,13 +59,12 @@ const About = () => (
             key={id}
             className="flex h-60 flex-col  justify-around rounded-3xl bg-[#EEF2FF] p-4 "
           >
-            <Image src={icon} alt="" width={16} height={16} layout="fixed" />
+            <Image src={icon} alt="" width={20} height={20} layout="fixed" />
             <div>{comment}</div>
             <div className="flex items-center space-x-4">
               <Image src={image} alt="" width={30} height={30} layout="fixed" />
-              <div className="flex justify-center items-center pt-1">
-
-              {name}
+              <div className="flex items-center justify-center pt-1 font-bold text-[#224E73]">
+                {name}
               </div>
             </div>
           </div>

@@ -8,10 +8,10 @@ const NavBar = () => (
         <Link href="/">
           <div className="flex w-2/5 cursor-pointer items-center space-x-4">
             <img src="/adonis.svg" alt="Vercel Logo" className="ml-2 h-12 " />
-            <div>Star Homecare Services</div>
+            <div className='text-[#224E73]' >Star Homecare Services</div>
           </div>
         </Link>
-        <div className="flex w-2/5 justify-around  ">
+        <div className="flex w-2/5 justify-around text-[#224E73]  ">
           <Link className="cursor-pointer" href="/Team">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Team

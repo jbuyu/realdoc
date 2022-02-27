@@ -38,7 +38,7 @@ const Hero = () => (
             alt="Picture of the author"
             width={432}
             height={624}
-            className=" rounded-lg "
+            className=" rounded-2xl "
           />
         </div>
       </div>

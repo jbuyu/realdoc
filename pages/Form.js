@@ -9,7 +9,7 @@ export default function Form() {
 
   return (
     <div className="mx-auto flex h-140 max-w-9xl flex-col">
-      <div className="h-80 items-center rounded-b-3xl bg-indigo-600 text-xl text-white ">
+      <div className="h-80 items-center rounded-b-3xl bg-indigo-600  text-xl text-white ">
         <div className="relative">
           <div className="flex h-80 w-1/2 flex-col items-start justify-center p-8">
             <div className="ont-semibold text-3xl">
@@ -196,7 +196,7 @@ export default function Form() {
                     </label>
                   </div>
                 </div>
-                <div className="mt-8">
+                <div className="mt-8 flex justify-center ">
                   <button
                     disabled={isSubmitting}
                     type="submit"
@@ -205,8 +205,8 @@ export default function Form() {
                     aria-label="create my account"
                     className={
                       isSubmitting
-                        ? 'w-full rounded border bg-indigo-400 py-4 text-sm font-semibold leading-none text-white opacity-50 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
-                        : 'w-full rounded border bg-indigo-700 py-4 text-sm font-semibold leading-none text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
+                        ? 'w-4/5 rounded border bg-indigo-400 py-4 text-sm font-semibold leading-none text-white opacity-50 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
+                        : 'w-4/5 rounded border bg-indigo-700 py-4 text-sm font-semibold leading-none text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
                     }
                   >
                     Submit
