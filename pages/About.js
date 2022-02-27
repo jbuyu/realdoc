@@ -49,7 +49,7 @@ const About = () => (
         />
       </div>
     </div>
-    <div className="flex w-full flex-col items-start justify-start pl-12">
+    <div className="flex w-full flex-col items-start justify-start pl-12 mt-8">
       <div className="  py-4 text-2xl font-extrabold text-[#224E73]">
         Feedback and Testimonials
       </div>
