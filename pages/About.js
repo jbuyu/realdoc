@@ -12,7 +12,7 @@ const About = () => (
           width={448}
           height={296}
           layout="fixed"
-          className="rounded-4xl"
+          className="rounded-3xl"
         />
       </div>
       <div className="item-center flex h-full w-1/2 flex-col justify-center">
@@ -45,7 +45,7 @@ const About = () => (
           width={448}
           height={296}
           layout="fixed"
-          className="rounded-4xl"
+          className="rounded-3xl"
         />
       </div>
     </div>
