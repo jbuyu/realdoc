@@ -7,7 +7,7 @@ const Hero = () => (
       <div className="flex h-128 flex-1 flex-col justify-center ">
         <div className="flex-start flex w-full space-x-2 border-l-4 border-solid border-indigo-700  ">
           <span></span>
-          <div className="text-2xl font-extrabold">
+          <div className="text-2xl font-extrabold text-[#224E73]">
             Personalized Healthcare at your doorstep
           </div>
         </div>

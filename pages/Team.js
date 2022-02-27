@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import teamArray from '../data/team'
+import {teamArray} from '../data'
 
 const Team = () => (
   <div className="max-w-8xl mx-auto flex flex-col  bg-[url('/bgpattern4.svg')] bg-cover bg-no-repeat">
@@ -19,7 +19,7 @@ const Team = () => (
           </div>
           <div className="relative mt-36 px-10 ">
             <div className="rounded-lg bg-white p-6 shadow-lg">
-              <h4 className="text-md mt-1 truncate font-semibold  leading-tight">
+              <h4 className="text-md mt-1 truncate font-semibold leading-tight text-slate-600">
                 {name}
               </h4>
               <div className="flex items-baseline pt-2">

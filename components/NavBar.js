@@ -24,7 +24,7 @@ const NavBar = () => (
           </Link>
           <Link href="/About">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
-              About us
+              About
             </div>
           </Link>
         </div>

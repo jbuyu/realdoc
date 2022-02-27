@@ -5,10 +5,10 @@ const Choice = () => (
   <div className="mx-auto max-w-9xl bg-[url('/bgpattern1.svg')] bg-cover bg-no-repeat">
     <div className="bg-[url('/lightblob.svg ')]bg-center flex items-center justify-between ">
       <div className="relative flex w-3/5 flex-col items-center justify-center">
-        <div className="w-2/3 text-2xl font-extrabold">
+        <div className="w-2/3 text-2xl font-extrabold text-[#224E73]">
           Why Choose Our Services
         </div>
-        <div className="w-2/3 ">
+        <div className="w-2/3  text-[#224E73] ">
           More than 90% of patients who visit hospitals do not need in-patient
           care. In this era where hospitals are hot spots for the spread of
           infectious diseases, we give you a feasible alternative to have

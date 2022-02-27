@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import servicesArray from '../data/services'
+import {servicesArray} from '../data'
 
 const Services = () => (
   <div className="mx-auto flex max-w-7xl flex-col">
-    <div className="mt-10 flex flex-col text-gray-900">
-      <header className="font-md text-center py-2 font-mono text-3xl font-semibold text-slate-600">
+    <div className="mt-10 flex flex-col">
+      <header className="font-md text-center py-2 font-mono text-3xl font-semibold text-[#224E73]">
         Our Services
       </header>
       <div className=" text-center  py-4 text-xl text-slate-600 ">
@@ -16,8 +16,8 @@ const Services = () => (
             <div className="flex h-56 w-56 items-center justify-center rounded-xl bg-gray-50 ">
               <Image src={icon} width={124} height={124} layout="fixed" />
             </div>
-            <div className="text-lg p-1 font-semibold text-black">{title}</div>
-            <div className=" text-md w-60 flex overflow-hidden whitespace-normal text-center text-sm font-medium">
+            <div className="text-lg p-1 font-semibold text-[#224E73]">{title}</div>
+            <div className=" text-md w-60 flex overflow-hidden whitespace-normal text-center text-sm font-medium text-slate-600">
               {description}
             </div>
           </div>
