@@ -53,7 +53,7 @@ const About = () => (
       <div className="  py-4 text-2xl font-extrabold text-[#224E73]">
         Feedback and Testimonials
       </div>
-      <div className="mt-12 flex w-full space-x-20">
+      <div className="mt-12 flex w-full space-x-10">
         {testimonialArray.map(({ id, icon, comment, name, image }) => (
           <div
             key={id}
