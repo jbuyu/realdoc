@@ -3,7 +3,7 @@ import { testimonialArray } from '../data'
 
 const About = () => (
   <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
-    <div className="mt-12 flex h-96 items-center justify-around py-4">
+    <div className="mt-12 flex h-96 flex-col items-center justify-around py-4 md:flex-row">
       <div className="">
         <Image
           src="/docparade.jpeg"
@@ -26,7 +26,7 @@ const About = () => (
         </div>
       </div>
     </div>
-    <div className="mt-12 flex h-96 items-center justify-around py-4">
+    <div className="mt-12 flex h-96 flex-col items-center justify-around py-4 md:flex-row ">
       <div className="flex h-full w-1/2 flex-col items-center justify-center">
         <div className="text-2xl font-extrabold text-[#224E73]">
           State of the art Equipment, Prompt results &amp; fast feedback
@@ -49,15 +49,15 @@ const About = () => (
         />
       </div>
     </div>
-    <div className="flex w-full flex-col items-start justify-start pl-12 mt-8">
+    <div className="mt-8 flex w-full flex-col items-start justify-start pl-12">
       <div className="  py-4 text-2xl font-extrabold text-[#224E73]">
         Feedback and Testimonials
       </div>
-      <div className="mt-12 flex w-full space-x-10">
+      <div className="mt-12 flex w-full flex-col space-x-0 md:space-x-10  md:flex-row justify-center items-center">
         {testimonialArray.map(({ id, icon, comment, name, image }) => (
           <div
             key={id}
-            className="flex h-60 flex-col  justify-around rounded-3xl bg-[#EEF2FF] p-4 "
+            className="flex h-60 flex-col justify-around rounded-3xl bg-[#EEF2FF] p-4 w-72 md:w-auto mt-8 "
           >
             <Image src={icon} alt="" width={20} height={20} layout="fixed" />
             <div>{comment}</div>
