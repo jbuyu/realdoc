@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import NavBar from "./NavBar";
-import Wave from "./Wave";
+import React, { Component } from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import NavBar from './NavBar'
+import Wave from './Wave'
 class Layout extends Component {
   render() {
-    const { children } = this.props;
+    const { children } = this.props
     return (
-      <div className="h-full">
-        <Header/>
+      <div className="h-full overflow-hidden ">
+        <Header />
         <NavBar />
         {children}
         <Wave />
         <Footer />
       </div>
-    );
+    )
   }
 }
-export default Layout;
+export default Layout

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const NavBar = () => (
-  <nav className="font-semibold">
+  <nav className="font-semibold ">
     <div className="mx-auto max-w-7xl py-6">
       <div className="flex items-center justify-between">
         <Link href="/">
