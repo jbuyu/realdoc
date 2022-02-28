@@ -8,7 +8,7 @@ class Layout extends Component {
     const { children } = this.props;
     return (
       <div className="h-full">
-        <Header />
+        <Header/>
         <NavBar />
         {children}
         <Wave />
