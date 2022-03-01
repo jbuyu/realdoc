@@ -2,19 +2,19 @@ import Link from 'next/link'
 import React from 'react'
 
 const Choice = () => (
-  <div className="mx-auto max-w-9xl bg-[url('/bgpattern1.svg')] bg-cover bg-no-repeat">
+  <div className="mx-auto max-w-9xl md:bg-[url('/bgpattern1.svg')] bg-cover bg-no-repeat pt-8 md:pt-0">
     <div className="bg-[url('/lightblob.svg ')]bg-center flex items-center justify-between ">
-      <div className="relative flex w-3/5 flex-col items-center justify-center">
-        <div className="w-2/3 text-2xl font-extrabold text-[#224E73]">
+      <div className="relative flex md:w-3/5 flex-col md:items-center md:justify-center pl-2 md:pd-0">
+        <div className="md:w-2/3 text-xl md:text-2xl font-extrabold text-[#224E73]">
           Why Choose Our Services
         </div>
-        <div className="w-2/3  text-[#224E73] ">
+        <div className="md:w-2/3  text-[#224E73] ">
           More than 90% of patients who visit hospitals do not need in-patient
           care. In this era where hospitals are hot spots for the spread of
           infectious diseases, we give you a feasible alternative to have
           quality medical care at the comfort of your home.
         </div>
-        <div className="w-2/3 pt-4">
+        <div className="w-2/3 pt-8 md:pt-4">
           <button className="hover:-translate-1 inline-flex rounded bg-indigo-500 py-2 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-700">
             <Link href="/Services">
               <span>Learn more</span>
@@ -22,7 +22,7 @@ const Choice = () => (
           </button>
         </div>
       </div>
-      <div className="flex w-2/5 flex-col  items-center justify-center">
+      <div className="hidden md:flex w-2/5 flex-col items-center justify-center">
         <div className="flex w-full p-4">
           <div className=" flex-start flex ">
             <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
