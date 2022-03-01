@@ -3,7 +3,7 @@ import { testimonialArray } from '../data'
 
 const About = () => (
   <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
-    <div className="mt-28 md:mt-20 flex h-96 flex-col items-center justify-around py-4 md:flex-row">
+    <div className="mt-28 flex h-96 flex-col items-center justify-around py-4 md:mt-20 md:flex-row">
       <div className="">
         <Image
           src="/docparade.jpeg"
@@ -15,7 +15,7 @@ const About = () => (
           className="rounded-3xl"
         />
       </div>
-      <div className="item-center flex h-full w-1/2 flex-col justify-center">
+      <div className="item-center flex h-full w-1/2 flex-col justify-center mt-10 md:mt-0">
         <div className="text-2xl font-extrabold text-[#224E73] ">
           Preventative, Prescriptive &amp; Curative Medical Practices
         </div>
@@ -26,9 +26,9 @@ const About = () => (
         </div>
       </div>
     </div>
-    <div className="mt-12 flex h-96 flex-col items-center justify-around py-4 md:flex-row ">
+    <div className="mt-80 md:mt-12 flex h-96 md:flex-row flex-col-reverse items-center justify-around py-4 ">
       <div className="flex h-full w-1/2 flex-col items-center justify-center">
-        <div className="text-2xl font-extrabold text-[#224E73]">
+        <div className="text-2xl font-extrabold text-[#224E73] mt-8 md;mt-0 ">
           State of the art Equipment, Prompt results &amp; fast feedback
         </div>
         <div className="py-8 text-slate-600">
@@ -49,15 +49,15 @@ const About = () => (
         />
       </div>
     </div>
-    <div className="mt-8 flex w-full flex-col items-start justify-start pl-12">
-      <div className="  py-4 text-2xl font-extrabold text-[#224E73]">
-        Feedback and Testimonials
+    <div className="mt-32 flex w-full flex-col items-start justify-start md:mt-8">
+      <div className="flex w-full justify-center py-4 text-2xl font-extrabold text-[#224E73] ">
+        Feedback &amp; Testimonials
       </div>
-      <div className="mt-12 flex w-full flex-col space-x-0 md:space-x-10  md:flex-row justify-center items-center">
+      <div className="mt-6 flex w-full flex-col items-center justify-center space-x-0  md:mt-12 md:flex-row md:space-x-10 ">
         {testimonialArray.map(({ id, icon, comment, name, image }) => (
           <div
             key={id}
-            className="flex h-60 flex-col justify-around rounded-3xl bg-[#EEF2FF] p-4 w-72 md:w-auto mt-8 "
+            className="mt-8 flex h-60 w-80 flex-col justify-around rounded-3xl bg-[#EEF2FF] p-4 md:w-auto "
           >
             <Image src={icon} alt="" width={20} height={20} layout="fixed" />
             <div>{comment}</div>
