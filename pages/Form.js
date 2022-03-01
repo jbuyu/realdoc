@@ -8,10 +8,10 @@ export default function Form() {
   const [startDate, setStartDate] = useState(new Date())
 
   return (
-    <div className="mx-auto flex h-140 max-w-9xl flex-col">
-      <div className="h-80 items-center rounded-b-3xl bg-indigo-600  text-xl text-white ">
+    <div className="mx-auto flex h-screen md:h-140 max-w-9xl flex-col">
+      <div className="h-80 items-center rounded-b-3xl text-xl  text-white md:bg-indigo-600 ">
         <div className="relative">
-          <div className="flex h-80 w-1/2 flex-col items-start justify-center p-8">
+          <div className="hidden h-80 w-1/2 flex-col items-start justify-center p-8 md:flex">
             <div className="ont-semibold text-3xl">
               Get expert medical Help!
             </div>
@@ -64,7 +64,7 @@ export default function Form() {
             }) => (
               <form
                 onSubmit={handleSubmit}
-                className="absolute top-0 right-0 mt-4 mr-12 flex w-2/5 flex-col justify-center rounded-xl border-x-2 border-indigo-200 bg-white p-8"
+                className="mt-4 flex w-full flex-col justify-center rounded-xl border-x-2 border-indigo-200 bg-white p-8 md:absolute md:top-0 md:right-0 md:mr-12 md:w-2/5"
               >
                 <div className="">
                   <input
