@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Footer = () => (
-  <div className="flex h-60 w-full  items-center justify-between bg-[#EEF2FF] md:justify-around md:p-8 ">
+  <div className="md:mt-0 mt-8 flex h-60 w-full  items-center justify-between bg-[#EEF2FF] md:justify-around md:p-8 ">
     <Link href="/">
       <div className=" h-100 hidden w-1/5 cursor-pointer items-center space-x-4 md:flex ">
         <img src="/adonis.svg" alt="Vercel Logo" className="ml-2 h-12 " />
