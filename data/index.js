@@ -75,7 +75,7 @@ const teamArray = [
 
 const testimonialArray = [
   {
-    id: 1,
+    id: 0,
     icon: '/quotes.svg',
     image: '/female.png',
     comment:
@@ -91,7 +91,7 @@ const testimonialArray = [
     name: 'Andrew',
   },
   {
-    id: 1,
+    id: 2,
     icon: '/quotes.svg',
     image: '/female.png',
     comment:
@@ -99,7 +99,7 @@ const testimonialArray = [
     name: 'Auriel',
   },
   {
-    id: 1,
+    id: 3,
     icon: '/quotes.svg',
     image: '/male.png',
     comment:

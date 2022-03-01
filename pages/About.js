@@ -13,6 +13,7 @@ const About = () => (
           height={296}
           layout="fixed"
           className="rounded-3xl"
+          priority="true"
         />
       </div>
       <div className="item-center flex h-full w-1/2 flex-col justify-center mt-10 md:mt-0">

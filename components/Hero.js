@@ -29,9 +29,9 @@ const Hero = () => (
         <img
           src="dots.svg"
           alt="dots_svg"
-          className="absolute top-0 right-0 flex w-1/6"
+          className="absolute top-0 right-0 hidden md:flex w-1/6"
         />
-        <div className=" absolute top-16 md:top-10 right-0 md:right-10">
+        <div className=" absolute top-36 md:top-10 right-0 md:right-10">
           <Image
             // loader={myLoader}
             src="/doc3.jpeg"
