@@ -3,7 +3,7 @@ import { testimonialArray } from '../data'
 
 const About = () => (
   <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
-    <div className="mt-12 flex h-96 flex-col items-center justify-around py-4 md:flex-row">
+    <div className="mt-28 md:mt-20 flex h-96 flex-col items-center justify-around py-4 md:flex-row">
       <div className="">
         <Image
           src="/docparade.jpeg"
