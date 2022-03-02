@@ -3,50 +3,47 @@ import { testimonialArray } from '../data'
 
 const About = () => (
   <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
-    <div className="mt-28 flex h-96 flex-col items-center justify-around py-4 md:mt-20 md:flex-row">
+    <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
       <div className="">
         <Image
           src="/docparade.jpeg"
           alt=""
-          className="w-full rounded-lg object-cover object-center shadow-md"
+          className="w-full rounded-3xl object-cover object-center shadow-md"
           width={448}
           height={296}
           layout="fixed"
-          className="rounded-3xl"
           priority="true"
         />
       </div>
-      <div className="item-center flex h-full w-1/2 flex-col justify-center mt-10 md:mt-0">
-        <div className="text-2xl font-extrabold text-[#224E73] ">
-          Preventative, Prescriptive &amp; Curative Medical Practices
+      <div className="item-center mt-10 flex h-full w-1/2 flex-col justify-center md:mt-0">
+        <div className="item-start flex w-full text-2xl font-extrabold text-[#224E73]">
+          Commitment to homecare
         </div>
         <div className="py-8 text-slate-600">
-          We take our work seriously; offering consultations, preventative care
-          and therapeutic advice with utmost integrity. We see our work as a
-          service to the community.
+          We take our work seriously; our team of doctors offer consultations,
+          preventative care and therapeutic advice at your doorstep. We see our
+          work as a service to the community.
         </div>
       </div>
     </div>
-    <div className="mt-80 md:mt-12 flex h-96 md:flex-row flex-col-reverse items-center justify-around py-4 ">
+    <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
       <div className="flex h-full w-1/2 flex-col items-center justify-center">
-        <div className="text-2xl font-extrabold text-[#224E73] mt-8 md;mt-0 ">
-          State of the art Equipment, Prompt results &amp; fast feedback
+        <div className="md:mt-0 item-start mt-8 flex w-full text-2xl font-extrabold text-[#224E73]">
+          Prompt results &amp; fast feedback
         </div>
         <div className="py-8 text-slate-600">
-          We Believe in delivering services as quick and in the most perfect way
-          we can. Alongside having state of the art equipment, our team is
-          dedicated and at your service.
+          Your health is very important to us. Alongside having state of the art
+          equipment, our team is dedicated and at your service.
         </div>
       </div>
       <div className="">
         <Image
           src="/doctorslab.jpeg"
           alt=""
-          className="w-full rounded-lg object-cover object-center shadow-md"
+          className="w-full rounded-3xl object-cover object-center shadow-md"
           width={448}
           height={296}
           layout="fixed"
-          className="rounded-3xl"
         />
       </div>
     </div>
