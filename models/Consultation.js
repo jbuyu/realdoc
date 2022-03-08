@@ -39,7 +39,7 @@ const ConsultationSchema = new mongoose.Schema(
     consultationType: {
       type: String,
       required: true,
-      maxlength: 10,
+      maxlength: 40,
     },
   },
   {

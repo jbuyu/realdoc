@@ -1,12 +1,15 @@
+import axios from 'axios'
 import { Field, Formik } from 'formik'
 import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import toast, { Toaster } from 'react-hot-toast'
 
 export default function Form() {
   //state
   const [startDate, setStartDate] = useState(new Date())
   const [gender, setGender] = useState('')
+  const [error, setError] = useState('')
 
   //fns
   const handleInput = (e) => {
@@ -19,246 +22,276 @@ export default function Form() {
   }
 
   return (
-    <div className="mx-auto flex h-screen max-w-9xl flex-col md:h-140">
-      <div className="h-80 items-center rounded-b-3xl text-xl  text-white md:bg-indigo-600 ">
-        <div className="relative">
-          <div className="hidden h-80 w-1/2 flex-col items-start justify-center p-8 md:flex">
-            <div className="ont-semibold text-3xl">
-              Get expert medical Help!
+    <>
+      <div className="mx-auto flex h-screen max-w-9xl flex-col md:h-140">
+        <div className="h-80 items-center rounded-b-3xl text-xl  text-white md:bg-indigo-600 ">
+          <div className="relative">
+            <div className="hidden h-80 w-1/2 flex-col items-start justify-center p-8 md:flex">
+              <div className="ont-semibold text-3xl">
+                Get expert medical Help!
+              </div>
+              <div className="pt-4">
+                Our team of Medical Doctors offer expert advice and
+                consultations. Fill in the form and we'll reach out immediately.
+              </div>
             </div>
-            <div className="pt-4">
-              Our team of Medical Doctors offer expert advice and consultations.
-              Fill in the form and we'll reach out immediately.
-            </div>
-          </div>
 
-          <Formik
-            initialValues={{
-              email: '',
-              firstname: '',
-              lastname: '',
-              phone: '',
-              gender: '',
-              dateOfBirth: startDate,
-              symptoms: '',
-              consultationType: '',
-            }}
-            validate={(values) => {
-              const errors = {}
-              if (!values.firstname) {
-                errors.firstname = 'Required'
-              }
-              if (!values.lastname) {
-                errors.lastname = 'Required'
-              }
-              if (!values.email) {
-                errors.email = 'Required'
-              }
-              if (!values.symptoms) {
-                errors.symptoms = 'Required'
-              }
-              if (!values.gender) {
-                errors.gender = 'Required'
-              }
-              if (!values.consultationType) {
-                errors.consultationType = 'Required'
-              }
+            <Formik
+              initialValues={{
+                email: '',
+                firstName: '',
+                lastName: '',
+                phoneNo: '',
+                gender: '',
+                dateOfBirth: startDate,
+                symptoms: '',
+                consultationType: '',
+              }}
+              validate={(values) => {
+                const errors = {}
+                if (!values.firstName) {
+                  errors.firstName = 'Required'
+                }
+                if (!values.lastName) {
+                  errors.lastName = 'Required'
+                }
+                if (!values.email) {
+                  errors.email = 'Required'
+                }
+                if (!values.symptoms) {
+                  errors.symptoms = 'Required'
+                }
+                if (!values.gender) {
+                  errors.gender = 'Required'
+                }
+                if (!values.consultationType) {
+                  errors.consultationType = 'Required'
+                }
 
-              if (!values.phone) {
-                errors.phone = 'Required'
-              } else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-              ) {
-                errors.email = 'Invalid email address'
-              }
-              return errors
-            }}
-            onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                // alert(JSON.stringify(values, null, 2));
-                console.log(values)
+                if (!values.phoneNo) {
+                  errors.phoneNo = 'Required'
+                } else if (
+                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                  errors.email = 'Invalid email address'
+                }
+                return errors
+              }}
+              onSubmit={(values, { setSubmitting }) => {
+                axios
+                  .post('http://localhost:3000/api/consultations', values)
+                  .then(
+                    (response) => {
+                      toast.success('Consultation created!!', {
+                        style: {
+                          border: '1px solid #713200',
+                          padding: '16px',
+                          color: '#fff',
+                          backgroundColor: '#4F46E5',
+                        },
+                        iconTheme: {
+                          primary: '#fff',
+                          secondary: '#FFFAEE',
+                        },
+                      })
+                    },
+                    (error) => {
+                      setError(error.response.data.message)
+                      console.log(error.response.data.message)
+                    }
+                  )
                 setSubmitting(false)
-              }, 400)
-            }}
-          >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              isSubmitting,
-              /* and other goodies */
-            }) => (
-              <form
-                onSubmit={handleSubmit}
-                className="mt-4 flex w-full flex-col justify-center rounded-xl border-x-2 border-indigo-200 bg-white p-8 md:absolute md:top-0 md:right-0 md:mr-12 md:w-2/5"
-              >
-                <div className="">
-                  <input
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    name="firstname"
-                    value={values.firstname}
-                    placeholder="First name"
-                    aria-label="enter email adress"
-                    role="input"
-                    type="text"
-                    className=" font-sm w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
-                  />
-                  <div className="text-sm text-red-600">
-                    {errors.firstname && touched.firstname && errors.firstname}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <input
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.lastname}
-                    name="lastname"
-                    placeholder="Last name"
-                    aria-label="enter email adress"
-                    role="input"
-                    type="text"
-                    className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
-                  />
-                  <div className="text-sm text-red-600">
-                    {errors.lastname && touched.lastname && errors.lastname}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <input
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.phone}
-                    name="phone"
-                    placeholder="Phone"
-                    aria-label="enter email address"
-                    role="input"
-                    type="number"
-                    className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
-                  />
-                  <div className="text-sm text-red-600">
-                    {errors.phone && touched.phone && errors.phone}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <input
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    name="email"
-                    value={values.email}
-                    type="email"
-                    placeholder="email"
-                    aria-label="enter email address"
-                    role="input"
-                    className="font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
-                  />
-                  <div className="text-sm text-red-600">
-                    {errors.email && touched.email && errors.email}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <span className="font-md text-sm leading-none text-gray-600">
-                    Gender
-                  </span>
-                  <div className="mt-2">
-                    <label className="inline-flex items-center">
-                      <Field name="gender" type="radio" value="Male" />
-                      <span className=" ml-2 text-sm text-gray-500">Male</span>
-                    </label>
-                    <label className="ml-6 inline-flex items-center">
-                      <Field name="gender" type="radio" value="Female" />
-                      <span className="ml-2 text-sm text-gray-500">Female</span>
-                    </label>
-                  </div>
-                  <div className="text-sm text-red-600">
-                    {errors.gender && touched.gender && errors.gender}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <span className="font-md text-sm leading-none text-gray-600">
-                    Date of Birth
-                  </span>
-                  <DatePicker
-                    selected={startDate}
-                    onChange={(date) => setStartDate(date)}
-                    className="font-sm rounded-md bg-gray-200 p-2 text-sm text-black outline-none"
-                  />
-                </div>
-                <div className="mt-4 flex flex-col">
-                  <span className="font-md py-2 text-sm leading-none text-gray-600">
-                    Symptoms
-                  </span>
-                  <textarea
-                    rows="4"
-                    className="font-sm resize rounded-md bg-gray-200 p-2 text-sm text-black outline-none "
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    name="symptoms"
-                    value={values.symptoms}
-                    type="text"
-                  ></textarea>
-                  <div className="text-sm text-red-600">
-                    {errors.symptoms && touched.symptoms && errors.symptoms}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <span className="font-md text-sm leading-none text-gray-600">
-                    Preferred Consultation
-                  </span>
-                  <div className="mt-2 flex flex-col">
-                    <label className="ml-2 flex items-center space-x-2">
-                      <Field
-                        name="consultationType"
-                        type="radio"
-                        value="Telemedicine"
-                      />
-
-                      <span className="text-sm text-gray-500">
-                        Telemedicine (video/call/chat) - 500/-
-                      </span>
-                    </label>
-                    <label className="ml-2 flex items-center space-x-2">
-                      <Field
-                        name="consultationType"
-                        type="radio"
-                        value="Home"
-                      />
-
-                      <span className=" text-sm text-gray-500">
-                        Home Doctor - 1200/-
-                      </span>
-                    </label>
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting,
+                /* and other goodies */
+              }) => (
+                <form
+                  onSubmit={handleSubmit}
+                  className="mt-4 flex w-full flex-col justify-center rounded-xl border-x-2 border-indigo-200 bg-white p-8 md:absolute md:top-0 md:right-0 md:mr-12 md:w-2/5"
+                >
+                  <div className="">
+                    <input
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      name="firstName"
+                      value={values.firstName}
+                      placeholder="First name"
+                      aria-label="enter email adress"
+                      role="input"
+                      type="text"
+                      className=" font-sm w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
+                    />
                     <div className="text-sm text-red-600">
-                      {errors.consultationType &&
-                        touched.consultationType &&
-                        errors.consultationType}
+                      {errors.firstName &&
+                        touched.firstName &&
+                        errors.firstName}
                     </div>
                   </div>
-                </div>
-                <div className="mt-8 flex justify-center ">
-                  <button
-                    disabled={isSubmitting}
-                    type="submit"
-                    disabled={isSubmitting}
-                    role="button"
-                    aria-label="create my account"
-                    className={
-                      isSubmitting
-                        ? 'w-4/5 rounded border bg-indigo-400 py-4 text-sm font-semibold leading-none text-white opacity-50 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
-                        : 'w-4/5 rounded border bg-indigo-700 py-4 text-sm font-semibold leading-none text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
-                    }
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            )}
-          </Formik>
+                  <div className="mt-4">
+                    <input
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.lastName}
+                      name="lastName"
+                      placeholder="Last name"
+                      aria-label="enter email adress"
+                      role="input"
+                      type="text"
+                      className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
+                    />
+                    <div className="text-sm text-red-600">
+                      {errors.lastName && touched.lastName && errors.lastName}
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <input
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.phoneNo}
+                      name="phoneNo"
+                      placeholder="Phone"
+                      aria-label="enter email address"
+                      role="input"
+                      type="number"
+                      className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
+                    />
+                    <div className="text-sm text-red-600">
+                      {errors.phoneNo && touched.phoneNo && errors.phoneNo}
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <input
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      name="email"
+                      value={values.email}
+                      type="email"
+                      placeholder="email"
+                      aria-label="enter email address"
+                      role="input"
+                      className="font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
+                    />
+                    <div className="text-sm text-red-600">
+                      {errors.email && touched.email && errors.email}
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <span className="font-md text-sm leading-none text-gray-600">
+                      Gender
+                    </span>
+                    <div className="mt-2">
+                      <label className="inline-flex items-center">
+                        <Field name="gender" type="radio" value="Male" />
+                        <span className=" ml-2 text-sm text-gray-500">
+                          Male
+                        </span>
+                      </label>
+                      <label className="ml-6 inline-flex items-center">
+                        <Field name="gender" type="radio" value="Female" />
+                        <span className="ml-2 text-sm text-gray-500">
+                          Female
+                        </span>
+                      </label>
+                    </div>
+                    <div className="text-sm text-red-600">
+                      {errors.gender && touched.gender && errors.gender}
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <span className="font-md text-sm leading-none text-gray-600">
+                      Date of Birth
+                    </span>
+                    <DatePicker
+                      selected={startDate}
+                      onChange={(date) => setStartDate(date)}
+                      className="font-sm rounded-md bg-gray-200 p-2 text-sm text-black outline-none"
+                    />
+                  </div>
+                  <div className="mt-4 flex flex-col">
+                    <span className="font-md py-2 text-sm leading-none text-gray-600">
+                      Symptoms
+                    </span>
+                    <textarea
+                      rows="4"
+                      className="font-sm resize rounded-md bg-gray-200 p-2 text-sm text-black outline-none "
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      name="symptoms"
+                      value={values.symptoms}
+                      type="text"
+                    ></textarea>
+                    <div className="text-sm text-red-600">
+                      {errors.symptoms && touched.symptoms && errors.symptoms}
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <span className="font-md text-sm leading-none text-gray-600">
+                      Preferred Consultation
+                    </span>
+                    <div className="mt-2 flex flex-col">
+                      <label className="ml-2 flex items-center space-x-2">
+                        <Field
+                          name="consultationType"
+                          type="radio"
+                          value="Telemedicine"
+                        />
+
+                        <span className="text-sm text-gray-500">
+                          Telemedicine (video/call/chat) - 500/-
+                        </span>
+                      </label>
+                      <label className="ml-2 flex items-center space-x-2">
+                        <Field
+                          name="consultationType"
+                          type="radio"
+                          value="Home"
+                        />
+
+                        <span className=" text-sm text-gray-500">
+                          Home Doctor - 1200/-
+                        </span>
+                      </label>
+                      <div className="text-sm text-red-600">
+                        {errors.consultationType &&
+                          touched.consultationType &&
+                          errors.consultationType}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-8 flex justify-center ">
+                    <button
+                      disabled={isSubmitting}
+                      type="submit"
+                      disabled={isSubmitting}
+                      role="button"
+                      aria-label="create my account"
+                      className={
+                        isSubmitting
+                          ? 'w-4/5 rounded border bg-indigo-400 py-4 text-sm font-semibold leading-none text-white opacity-50 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
+                          : 'w-4/5 rounded border bg-indigo-700 py-4 text-sm font-semibold leading-none text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2'
+                      }
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <div className="flex items-center justify-center pt-1 text-sm text-red-600">
+                    {error && <p>{error}</p>}
+                  </div>
+                </form>
+              )}
+            </Formik>
+          </div>
         </div>
       </div>
-    </div>
+      <Toaster position="bottom-right" reverseOrder={false} />
+    </>
   )
 }
