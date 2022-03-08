@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 
-const consultationSchema = new mongoose.Schema(
+const ConsultationSchema = new mongoose.Schema(
   {
-    firtName: {
+    firstName: {
       type: String,
       required: true,
       maxlength: 60,
@@ -12,7 +12,7 @@ const consultationSchema = new mongoose.Schema(
       required: true,
       maxlength: 60,
     },
-    phone: {
+    phoneNo: {
       type: String,
       required: true,
       maxlength: 60,
@@ -47,4 +47,5 @@ const consultationSchema = new mongoose.Schema(
   }
 )
 
-export default mongoose.model('Consultation', consultationSchema)
+export default mongoose.models.Consultation ||
+  mongoose.model('Consultation', ConsultationSchema)
