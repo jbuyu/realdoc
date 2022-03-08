@@ -1,14 +1,25 @@
+import { Field, Formik } from 'formik'
 import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import { Formik } from 'formik'
 
 export default function Form() {
   //state
   const [startDate, setStartDate] = useState(new Date())
+  const [gender, setGender] = useState('')
+
+  //fns
+  const handleInput = (e) => {
+    const inputName = e.currentTarget.name
+    const value = e.currentTarget.value
+    setGender((prev) => ({
+      ...prev,
+      [inputName]: value,
+    }))
+  }
 
   return (
-    <div className="mx-auto flex h-screen md:h-140 max-w-9xl flex-col">
+    <div className="mx-auto flex h-screen max-w-9xl flex-col md:h-140">
       <div className="h-80 items-center rounded-b-3xl text-xl  text-white md:bg-indigo-600 ">
         <div className="relative">
           <div className="hidden h-80 w-1/2 flex-col items-start justify-center p-8 md:flex">
@@ -20,12 +31,17 @@ export default function Form() {
               Fill in the form and we'll reach out immediately.
             </div>
           </div>
+
           <Formik
             initialValues={{
               email: '',
-              password: '',
               firstname: '',
               lastname: '',
+              phone: '',
+              gender: '',
+              dateOfBirth: startDate,
+              symptoms: '',
+              consultationType: '',
             }}
             validate={(values) => {
               const errors = {}
@@ -37,6 +53,19 @@ export default function Form() {
               }
               if (!values.email) {
                 errors.email = 'Required'
+              }
+              if (!values.symptoms) {
+                errors.symptoms = 'Required'
+              }
+              if (!values.gender) {
+                errors.gender = 'Required'
+              }
+              if (!values.consultationType) {
+                errors.consultationType = 'Required'
+              }
+
+              if (!values.phone) {
+                errors.phone = 'Required'
               } else if (
                 !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
               ) {
@@ -86,8 +115,8 @@ export default function Form() {
                   <input
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    name="lastname"
                     value={values.lastname}
+                    name="lastname"
                     placeholder="Last name"
                     aria-label="enter email adress"
                     role="input"
@@ -100,12 +129,19 @@ export default function Form() {
                 </div>
                 <div className="mt-4">
                   <input
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.phone}
+                    name="phone"
                     placeholder="Phone"
                     aria-label="enter email address"
                     role="input"
                     type="number"
                     className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
                   />
+                  <div className="text-sm text-red-600">
+                    {errors.phone && touched.phone && errors.phone}
+                  </div>
                 </div>
                 <div className="mt-4">
                   <input
@@ -129,23 +165,16 @@ export default function Form() {
                   </span>
                   <div className="mt-2">
                     <label className="inline-flex items-center">
-                      <input
-                        type="radio"
-                        className="form-radio cursor-pointer"
-                        name="gender"
-                        value="male"
-                      />
+                      <Field name="gender" type="radio" value="Male" />
                       <span className=" ml-2 text-sm text-gray-500">Male</span>
                     </label>
                     <label className="ml-6 inline-flex items-center">
-                      <input
-                        type="radio"
-                        className="form-radio cursor-pointer"
-                        name="gender"
-                        value="female"
-                      />
+                      <Field name="gender" type="radio" value="Female" />
                       <span className="ml-2 text-sm text-gray-500">Female</span>
                     </label>
+                  </div>
+                  <div className="text-sm text-red-600">
+                    {errors.gender && touched.gender && errors.gender}
                   </div>
                 </div>
                 <div className="mt-4">
@@ -165,7 +194,15 @@ export default function Form() {
                   <textarea
                     rows="4"
                     className="font-sm resize rounded-md bg-gray-200 p-2 text-sm text-black outline-none "
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="symptoms"
+                    value={values.symptoms}
+                    type="text"
                   ></textarea>
+                  <div className="text-sm text-red-600">
+                    {errors.symptoms && touched.symptoms && errors.symptoms}
+                  </div>
                 </div>
                 <div className="mt-4">
                   <span className="font-md text-sm leading-none text-gray-600">
@@ -173,27 +210,32 @@ export default function Form() {
                   </span>
                   <div className="mt-2 flex flex-col">
                     <label className="ml-2 flex items-center space-x-2">
-                      <input
+                      <Field
+                        name="consultationType"
                         type="radio"
-                        className="form-radio cursor-pointer"
-                        name="method"
-                        value="videochat"
+                        value="Telemedicine"
                       />
+
                       <span className="text-sm text-gray-500">
                         Telemedicine (video/call/chat) - 500/-
                       </span>
                     </label>
                     <label className="ml-2 flex items-center space-x-2">
-                      <input
+                      <Field
+                        name="consultationType"
                         type="radio"
-                        className="form-radio cursor-pointer"
-                        name="method"
-                        value="home"
+                        value="Home"
                       />
+
                       <span className=" text-sm text-gray-500">
                         Home Doctor - 1200/-
                       </span>
                     </label>
+                    <div className="text-sm text-red-600">
+                      {errors.consultationType &&
+                        touched.consultationType &&
+                        errors.consultationType}
+                    </div>
                   </div>
                 </div>
                 <div className="mt-8 flex justify-center ">
