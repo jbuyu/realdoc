@@ -21,19 +21,23 @@ const About = () => (
         </div>
         <div className="py-8 text-slate-600">
           We take our work seriously; our team of doctors offer consultations,
-          preventative care and therapeutic advice at your doorstep. We see our
-          work as a service to the community.
+          preventative care and therapeutic advice at your doorstep. Alongside
+          helping you n your recovery process, we are here to make sure you stay
+          healthy in the long run.
         </div>
       </div>
     </div>
     <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
       <div className="flex h-full w-1/2 flex-col items-center justify-center">
-        <div className="md:mt-0 item-start mt-8 flex w-full text-2xl font-extrabold text-[#224E73]">
+        <div className="item-start mt-8 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
           Prompt results &amp; fast feedback
         </div>
         <div className="py-8 text-slate-600">
-          Your health is very important to us. Alongside having state of the art
-          equipment, our team is dedicated and at your service.
+          Your health is very important to us. We'll dispatch a doctor best
+          suited for your conditio. They have a modern state of the art
+          laboratory at their disposal to bolster fast feedback. After their
+          diagnosis, we'll stay in touch, offering guidelines and everything
+          necesary through your recovery journey.
         </div>
       </div>
       <div className="">

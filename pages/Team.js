@@ -6,7 +6,7 @@ const Team = () => (
   <div className="max-w-8xl mx-auto flex flex-col  bg-[url('/bgpattern4.svg')] bg-cover bg-no-repeat">
     <div className="mt-10 flex flex-wrap justify-around px-20 text-gray-900">
       {teamArray.map(({ id, image, name, speciality }) => (
-        <div className="pt-4">
+        <div key={id} className="pt-4">
           <div className="h-64 w-130">
             <Image
               src={image}

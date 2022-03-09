@@ -4,7 +4,7 @@ import React from 'react'
 const Choice = () => (
   <div className="mx-auto max-w-9xl md:bg-[url('/bgpattern1.svg')] bg-cover bg-no-repeat pt-8 md:pt-0">
     <div className="bg-[url('/lightblob.svg ')]bg-center flex items-center justify-between ">
-      <div className="relative flex md:w-3/5 flex-col md:items-center md:justify-center pl-2 md:pd-0">
+      <div className="relative flex md:w-3/5 flex-col md:items-center md:justify-center pl-2 md:pd-0 ">
         <div className="md:w-2/3 text-xl md:text-2xl font-extrabold text-[#224E73]">
           Why Choose Our Services
         </div>
@@ -14,7 +14,7 @@ const Choice = () => (
           infectious diseases, we give you a feasible alternative to have
           quality medical care at the comfort of your home.
         </div>
-        <div className="w-2/3 pt-8 md:pt-4">
+        <div className="md:w-2/3 pt-8 md:pt-4 flex justify-center md:justify-start ">
           <button className="hover:-translate-1 inline-flex rounded bg-indigo-500 py-2 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-700">
             <Link href="/Services">
               <span>Learn more</span>
