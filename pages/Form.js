@@ -80,7 +80,7 @@ export default function Form() {
               onSubmit={(values, { setSubmitting }) => {
                 axios
                   // .post('http://localhost:5000/api/consultations', values)
-                  .post('https://realdoc-server.herokuapp.com', values)
+                  .post('https://realdoc-server.herokuapp.com/api/consultations', values)
                   .then(
                     (response) => {
                       toast.success('Consultation created!!', {
