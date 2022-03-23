@@ -79,7 +79,8 @@ export default function Form() {
               }}
               onSubmit={(values, { setSubmitting }) => {
                 axios
-                  .post('http://localhost:3000/api/consultations', values)
+                  // .post('http://localhost:5000/api/consultations', values)
+                  .post('https://realdoc-server.herokuapp.com', values)
                   .then(
                     (response) => {
                       toast.success('Consultation created!!', {
@@ -270,7 +271,6 @@ export default function Form() {
                     <button
                       disabled={isSubmitting}
                       type="submit"
-                      disabled={isSubmitting}
                       role="button"
                       aria-label="create my account"
                       className={
