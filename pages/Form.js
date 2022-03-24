@@ -1,15 +1,24 @@
 import axios from 'axios'
 import { Field, Formik } from 'formik'
+import Image from 'next/image'
 import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import toast, { Toaster } from 'react-hot-toast'
 
 export default function Form() {
+  //spinner css
+  // const override = css`
+  //   display: block;
+  //   margin: 0 auto;
+  //   border-color: red;
+  // `
   //state
   const [startDate, setStartDate] = useState(new Date())
   const [gender, setGender] = useState('')
   const [error, setError] = useState('')
+  let [loading, setLoading] = useState(false)
+  let [color, setColor] = useState('#ffffff')
 
   //fns
   const handleInput = (e) => {
@@ -84,8 +93,10 @@ export default function Form() {
                 return errors
               }}
               onSubmit={(values, { setSubmitting }) => {
+                setLoading(true)
                 axios.post(`${API_URL}`, values).then(
                   (response) => {
+                    setLoading(false)
                     toast.success('Consultation created!!', {
                       style: {
                         border: '1px solid #713200',
@@ -288,6 +299,19 @@ export default function Form() {
                   <div className="flex items-center justify-center pt-1 text-sm text-red-600">
                     {error && <p>{error}</p>}
                   </div>
+                  {loading && (
+                    <div className="flex justify-center ">
+                      {/* <BeatLoader color={color} loading={loading} size={150} /> */}
+                      <Image
+                        src="/loader.gif"
+                        alt=""
+                        className="w-full rounded-lg object-cover object-center shadow-md"
+                        width={70}
+                        height={50}
+                        layout="fixed"
+                      />
+                    </div>
+                  )}
                 </form>
               )}
             </Formik>
