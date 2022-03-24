@@ -20,6 +20,12 @@ export default function Form() {
       [inputName]: value,
     }))
   }
+  const API_URL =
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:5000/api/consultations'
+      : 'https://realdoc-server.herokuapp.com/api/consultations'
+
+  console.log(API_URL)
 
   return (
     <>
@@ -78,29 +84,26 @@ export default function Form() {
                 return errors
               }}
               onSubmit={(values, { setSubmitting }) => {
-                axios
-                  // .post('http://localhost:5000/api/consultations', values)
-                  .post('https://realdoc-server.herokuapp.com/api/consultations', values)
-                  .then(
-                    (response) => {
-                      toast.success('Consultation created!!', {
-                        style: {
-                          border: '1px solid #713200',
-                          padding: '16px',
-                          color: '#fff',
-                          backgroundColor: '#4F46E5',
-                        },
-                        iconTheme: {
-                          primary: '#fff',
-                          secondary: '#FFFAEE',
-                        },
-                      })
-                    },
-                    (error) => {
-                      setError(error.response.data.message)
-                      console.log(error.response.data.message)
-                    }
-                  )
+                axios.post(`${API_URL}`, values).then(
+                  (response) => {
+                    toast.success('Consultation created!!', {
+                      style: {
+                        border: '1px solid #713200',
+                        padding: '16px',
+                        color: '#fff',
+                        backgroundColor: '#4F46E5',
+                      },
+                      iconTheme: {
+                        primary: '#fff',
+                        secondary: '#FFFAEE',
+                      },
+                    })
+                  },
+                  (error) => {
+                    setError(error.response.data.message)
+                    console.log(error.response.data.message)
+                  }
+                )
                 setSubmitting(false)
               }}
             >
