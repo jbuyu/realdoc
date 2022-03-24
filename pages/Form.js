@@ -175,7 +175,7 @@ export default function Form() {
                       placeholder="Phone"
                       aria-label="enter email address"
                       role="input"
-                      type="number"
+                      type="tel"
                       className=" font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
                     />
                     <div className="text-sm text-red-600">
