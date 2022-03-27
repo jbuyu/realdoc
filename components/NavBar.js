@@ -20,11 +20,11 @@ const NavBar = () => {
             </div>
           </Link>
           <div className="hidden w-full justify-around text-[#224E73] md:flex md:w-2/5">
-            <Link className="cursor-pointer" href="/Team">
+            {/* <Link className="cursor-pointer" href="/Team">
               <div className="cursor-pointer hover:text-indigo-700 hover:underline">
                 Team
               </div>
-            </Link>
+            </Link> */}
             <Link href="/Services">
               <div className="cursor-pointer hover:text-indigo-700 hover:underline">
                 Services
@@ -52,11 +52,11 @@ const NavBar = () => {
           </div>
         </div>
         <div className={isopen ? "mobile-menu block space-y-3 p-4 md:hidden": "mobile-menu hidden space-y-3 p-4 md:hidden"}>
-          <Link className="cursor-pointer" href="/Team">
+          {/* <Link className="cursor-pointer" href="/Team">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Team
             </div>
-          </Link>
+          </Link> */}
           <Link href="/Services">
             <div className="cursor-pointer hover:text-indigo-700 hover:underline">
               Services
