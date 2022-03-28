@@ -13,10 +13,10 @@ const NavBar = () => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex w-2/5 cursor-pointer items-center space-x-4">
-              <img src="/logo3.jpeg" alt="Vercel Logo" className="ml-2 h-32 " />
-              {/* <div className=" hidden text-[#224E73] md:flex">
+              <img src="/adonis.svg" alt="Vercel Logo" className="ml-2 h-14 " />
+              <div className=" hidden text-[#224E73] md:flex">
                 Star Homecare Services
-              </div> */}
+              </div>
             </div>
           </Link>
           <div className="hidden w-full justify-around text-[#224E73] md:flex md:w-2/5">
