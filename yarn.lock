@@ -23,6 +23,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@bradgarropy/next-seo@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@bradgarropy/next-seo/-/next-seo-1.2.0.tgz#0c79eab154b887ec5ac5d9e744c5e3dc54354c2f"
+  integrity sha512-AdSZOJw3NIvTxKoRv5IDX/WFhLi7Y2bvmW0OVWLf/rzIJRONms3MZ+aJz2u5Hv2FMgl4cT2Y/4xxEuOmB5u03w==
+
 "@heroicons/react@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.5.tgz#2fe4df9d33eb6ce6d5178a0f862e97b61c01e27d"

@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 const Header = () => (
   <Head>
-    <title>Star Homecare</title>
+    <title>Star Homecarer</title>
     <link rel="icon" href="/adonis.ico" />
   </Head>
 )

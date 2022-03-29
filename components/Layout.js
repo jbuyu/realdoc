@@ -8,7 +8,7 @@ class Layout extends Component {
     const { children } = this.props
     return (
       <div className="h-full overflow-hidden ">
-        <Header />
+        {/* <Header /> */}
         <NavBar />
         {children}
         <Wave />
