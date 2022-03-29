@@ -5,7 +5,6 @@ import SEO from '@bradgarropy/next-seo'
 const About = () => (
   <>
     <SEO description="About star Homecare services" />
-
     <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
       <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
         <div className="">
@@ -33,7 +32,7 @@ const About = () => (
       </div>
       <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
         <div className="flex h-full w-1/2 flex-col items-center justify-center">
-          <div className="item-start mt-8 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
+          <div className="item-start mt-32 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
             Prompt results &amp; fast feedback
           </div>
           <div className="py-8 text-slate-600">
@@ -52,11 +51,12 @@ const About = () => (
             width={448}
             height={296}
             layout="fixed"
+            priority
           />
         </div>
       </div>
       <div className="mt-32 flex w-full flex-col items-start justify-start md:mt-8">
-        <div className="flex w-full justify-center py-4 text-2xl font-extrabold text-[#224E73] ">
+        <div className="flex w-full justify-center mt-24 md:mt-0 py-4 text-2xl font-extrabold text-[#224E73] ">
           Feedback &amp; Testimonials
         </div>
         <div className="mt-6 flex w-full flex-col items-center justify-center space-x-0  md:mt-12 md:flex-row md:space-x-10 ">

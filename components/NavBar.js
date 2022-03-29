@@ -1,6 +1,15 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { MenuIcon } from '@heroicons/react/solid'
+import {
+  Link as Linker,
+  smooth,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from 'react-scroll'
 
 const NavBar = () => {
   const [isopen, setIsOpen] = useState(false)
@@ -45,9 +54,14 @@ const NavBar = () => {
           </div>
           <div className="hidden  md:flex">
             <button className="rounded-full bg-indigo-600 py-2 px-6 font-bold text-white hover:bg-indigo-700">
-              <Link className="cursor-pointer" href="/services">
+              <Linker
+                className="cursor-pointer"
+                to="contacts"
+                scrollspy="true"
+                smooth={true}
+              >
                 Contact
-              </Link>
+              </Linker>
             </button>
           </div>
         </div>

@@ -87,7 +87,7 @@ const testimonialArray = [
     icon: '/quotes.svg',
     image: '/male.png',
     comment:
-      "Amazing customer service. I'm impressed by how genuinely I was treated.",
+      'I received my chemotherapy results and got follow up consultations that were prompt.',
     name: 'Andrew',
   },
   {
@@ -95,7 +95,7 @@ const testimonialArray = [
     icon: '/quotes.svg',
     image: '/female.png',
     comment:
-      "Amazing customer service. I'm impressed by how genuinely I was treated.",
+      'We are trully living in the age of modern medicine judging by how good these services were.',
     name: 'Auriel',
   },
   {
@@ -103,7 +103,7 @@ const testimonialArray = [
     icon: '/quotes.svg',
     image: '/male.png',
     comment:
-      "Amazing customer service. I'm impressed by how genuinely I was treated.",
+      'Their telemedine offering really helped during my fieldwork days when I camped out in Botswana.',
     name: 'Lanton',
   },
 ]
