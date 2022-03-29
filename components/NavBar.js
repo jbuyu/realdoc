@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { MenuIcon } from '@heroicons/react/solid'
+Image
 import {
   Link as Linker,
   smooth,
@@ -10,6 +11,7 @@ import {
   scrollSpy,
   scroller,
 } from 'react-scroll'
+import Image from 'next/image'
 
 const NavBar = () => {
   const [isopen, setIsOpen] = useState(false)
@@ -22,7 +24,7 @@ const NavBar = () => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex w-2/5 cursor-pointer items-center space-x-4">
-              <img src="/adonis.svg" alt="Vercel Logo" className="ml-2 h-14 " />
+              <Image height={100} width={100} src="/logo2.svg" alt="Vercel Logo" className="ml-2 h-14 " />
               <div className=" hidden text-[#224E73] md:flex">
                 Star Homecare Services
               </div>
