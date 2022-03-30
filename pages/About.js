@@ -74,6 +74,7 @@ const About = () => (
                   width={30}
                   height={30}
                   layout="fixed"
+                  priority
                 />
                 <div className="flex items-center justify-center pt-1 font-bold text-[#224E73]">
                   {name}

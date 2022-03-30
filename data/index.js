@@ -9,24 +9,31 @@ const servicesArray = [
   {
     id: 1,
     icon: '/homecare.svg',
-    title: 'Homecare',
+    title: 'Homedoctor Services',
     description:
       'Our doctors are flexible and will readily get to your location.',
   },
   {
     id: 2,
+    icon: '/homenurse.svg',
+    title: 'Home based Nursing Care',
+    description:
+      "Our nurses are always on standby to offer Home based services when called upon",
+  },
+  {
+    id: 3,
     icon: '/laboratory.svg',
     title: 'Laboratory',
     description: 'We have modern laboratories for tests  and  prompt results.',
   },
   {
-    id: 3,
+    id: 4,
     icon: '/nutrition.svg',
     title: 'Nutrition',
     description: 'We offer customized diet plans, for all our patient.',
   },
   {
-    id: 4,
+    id: 5,
     icon: '/physiotherapy.svg',
     title: 'Physiotherapy',
     description:
