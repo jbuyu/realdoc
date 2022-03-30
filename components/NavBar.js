@@ -26,7 +26,7 @@ const NavBar = () => {
             <div className="flex w-2/5 cursor-pointer items-center space-x-4">
               <Image height={100} width={100} src="/logo2.svg" alt="Vercel Logo" className="ml-2 h-14 " />
               <div className=" hidden text-[#224E73] md:flex">
-                Star Homecare Services
+                StarHome Health Services
               </div>
             </div>
           </Link>

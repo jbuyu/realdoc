@@ -3,12 +3,15 @@ import SEO from '@bradgarropy/next-seo'
 import Layout from '../components/Layout'
 import '../styles/globals.css'
 
-
 function MyApp({ Component, pageProps }) {
   // console.log('node-env', )
   return (
     <Layout>
-      <SEO title="Star Homecare Services" description="A blog and portfolio" icon='/adonis.ico' />
+      <SEO
+        title="Star Home Health Services"
+        description="Offering online medical home health services in kenya"
+        icon="/adonis.ico"
+      />
       <Component {...pageProps} />
     </Layout>
   )
