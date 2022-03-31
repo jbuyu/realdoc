@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <SEO
-        title="Star Home Health Services"
+        title="Star Homecare Services"
         description="Offering online medical home health services in kenya"
         icon="/adonis.ico"
       />

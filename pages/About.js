@@ -4,7 +4,7 @@ import SEO from '@bradgarropy/next-seo'
 
 const About = () => (
   <>
-    <SEO description="About star Homecare services" />
+    <SEO description="About Star Homecare Services" />
     <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
       <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
         <div className="">
