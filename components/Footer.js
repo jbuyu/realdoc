@@ -16,10 +16,9 @@ const Footer = () => (
     </Link>
     <div className="flex w-full justify-around md:w-1/5 ">
       <div className="flex w-full flex-col ">
-        <div className="flex flex-col items-center space-y-2 pb-8 md:items-start md:pb-0 ">
-          <div>Terms</div>
-          <div>Privacy Policy</div>
-          <div>Pharmacy</div>
+        <div className="flex flex-col items-center space-y-2 pb-8 md:hidden md:items-start md:pb-0 ">
+          <div className="text-[#224E73] text-lg ">&copy; Star Homecare Services</div>
+          <div className="text-[#224E73] text-lg">+254700249154</div>
         </div>
         <div className="hidden justify-center py-4 font-semibold md:flex md:justify-start">
           Get In Touch

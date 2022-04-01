@@ -55,11 +55,11 @@ const About = () => (
           />
         </div>
       </div>
-      <div className="mt-32 flex w-full flex-col items-start justify-start md:mt-8">
+      <div className="mt-36 flex w-full flex-col items-start justify-start md:mt-8">
         <div className="flex w-full justify-center mt-24 md:mt-0 py-4 text-2xl font-extrabold text-[#224E73] ">
           Feedback &amp; Testimonials
         </div>
-        <div className="mt-6 flex w-full flex-col items-center justify-center space-x-0  md:mt-12 md:flex-row md:space-x-10 ">
+        <div className="mt-2 flex w-full flex-col items-center justify-center space-x-0  md:mt-12 md:flex-row md:space-x-10 ">
           {testimonialArray.map(({ id, icon, comment, name, image }) => (
             <div
               key={id}
