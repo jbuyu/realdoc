@@ -86,15 +86,21 @@ const NavBar = () => {
             </div>
           </Link> */}
           <Link href="/Services">
-            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
+            <div className="cursor-pointer  text-[#224E73] hover:text-indigo-700 hover:underline">
               Services
             </div>
           </Link>
           <Link href="/About">
-            <div className="cursor-pointer hover:text-indigo-700 hover:underline">
+            <div className="cursor-pointer  text-[#224E73] hover:text-indigo-700 hover:underline">
               About
             </div>
           </Link>
+
+          <Linker to="contacts" scrollspy="true" smooth={true}>
+            <div className="mt-4 cursor-pointer  text-[#224E73] hover:text-indigo-700 hover:underline">
+              Contact
+            </div>
+          </Linker>
         </div>
       </div>
     </nav>
