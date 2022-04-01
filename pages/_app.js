@@ -9,8 +9,25 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <SEO
         title="Star Homecare Services"
-        description="Offering online medical home health services in kenya"
-        icon="/adonis.ico"
+        description="Offering online medical health services in kenya"
+        icon="/favicon.ico"
+        keywords={[
+          'Kenyan Doctor',
+          'Kenya doctor help',
+          'Consult doctor Kenya',
+          'Online medical consultation',
+          'Best online consultation kenya',
+        ]}
+        facebook={{
+          image: "/favicon.png",
+          url: "https://www.starhomecareservices.com/",
+          type: "website",
+      }}
+      twitter={{
+          image: "/twitter.png",
+          site: "@bradgarropy",
+          card: "summary",
+      }}
       />
       <Component {...pageProps} />
     </Layout>

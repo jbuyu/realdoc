@@ -17,8 +17,15 @@ const Footer = () => (
     <div className="flex w-full justify-around md:w-1/5 ">
       <div className="flex w-full flex-col ">
         <div className="flex flex-col items-center space-y-2 pb-8 md:hidden md:items-start md:pb-0 ">
-          <div className="text-[#224E73] text-lg ">&copy; Star Homecare Services</div>
-          <div className="text-[#224E73] text-lg">+254700249154</div>
+          <div className="text-md font-bold text-[#224E73] ">
+            <a href="mailto:starhomecareservice1@gmail.com">Mail</a>
+          </div>
+          <div className="text-md font-bold text-[#224E73] ">
+            <a href="tel:0742464878">+254703468112</a>
+          </div>
+          <div className="text-md font-bold text-[#224E73] ">
+            &copy; Star Homecare Services
+          </div>
         </div>
         <div className="hidden justify-center py-4 font-semibold md:flex md:justify-start">
           Get In Touch
@@ -40,17 +47,20 @@ const Footer = () => (
       </div>
     </div>
     <div className="hidden h-full w-1/5 flex-col justify-evenly md:flex">
+      <div className="flex items-center justify-center md:justify-start">
+        <img className="w-8" src="/email.svg" alt="" />
+        <div className="hidden pl-4 md:flex">
+          <a href="mailto:starhomecareservice1@gmail.com">Contact</a>
+        </div>
+      </div>
       <div className="flex items-center justify-center md:justify-start ">
         <img className="w-8" src="/location.svg" alt="" />
         <div className="hidden pl-4 md:flex">Nairobi</div>
       </div>
+
       <div className="flex items-center justify-center md:justify-start ">
         <img className="w-8" src="/phone.svg" alt="" />
         <div className="hidden pl-4 md:flex">+254700456768</div>
-      </div>
-      <div className="flex items-center justify-center md:justify-start">
-        <img className="w-8" src="/email.svg" alt="" />
-        <div className="hidden pl-4 md:flex"> homeserve@gmail.com</div>
       </div>
     </div>
   </div>
