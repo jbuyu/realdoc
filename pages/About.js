@@ -4,7 +4,7 @@ import SEO from '@bradgarropy/next-seo'
 
 const About = () => (
   <>
-    <SEO description="About Star Homecare Services" />
+    <SEO title="About us" description="About Star Homecare Services" />
     <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
       <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
         <div className="">
@@ -56,7 +56,7 @@ const About = () => (
         </div>
       </div>
       <div className="mt-36 flex w-full flex-col items-start justify-start md:mt-8">
-        <div className="flex w-full justify-center mt-24 md:mt-0 py-4 text-2xl font-extrabold text-[#224E73] ">
+        <div className="mt-24 flex w-full justify-center py-4 text-2xl font-extrabold text-[#224E73] md:mt-0 ">
           Feedback &amp; Testimonials
         </div>
         <div className="mt-2 flex w-full flex-col items-center justify-center space-x-0  md:mt-12 md:flex-row md:space-x-10 ">

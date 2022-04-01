@@ -2,10 +2,9 @@ import SEO from '@bradgarropy/next-seo'
 import Image from 'next/image'
 import { servicesArray } from '../data'
 
-
 const Services = () => (
   <>
-    <SEO description="Star Homecare Services" />
+    <SEO  title="Star Homecare Services" description="Our Services" />
     <div className="mx-auto flex max-w-7xl flex-col">
       <div className="mt-10 flex flex-col">
         <header className="font-md py-2 text-center font-mono text-3xl font-semibold text-[#224E73]">
