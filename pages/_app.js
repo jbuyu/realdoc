@@ -24,8 +24,8 @@ function MyApp({ Component, pageProps }) {
           type: "website",
       }}
       twitter={{
-          image: "/twitter.png",
-          site: "@bradgarropy",
+          image: "/favicon.png",
+          site: "https://www.starhomecareservices.com/",
           card: "summary",
       }}
       />
