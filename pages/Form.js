@@ -34,8 +34,6 @@ export default function Form() {
       ? 'http://localhost:5000/api/consultations'
       : 'https://realdoc-server.herokuapp.com/api/consultations'
 
-  console.log(API_URL)
-
   return (
     <>
       <div className="mx-auto flex h-screen max-w-9xl flex-col md:h-140">
@@ -54,6 +52,7 @@ export default function Form() {
             <Formik
               initialValues={{
                 email: '',
+                location: '',
                 firstName: '',
                 lastName: '',
                 phoneNo: '',
@@ -70,8 +69,8 @@ export default function Form() {
                 if (!values.lastName) {
                   errors.lastName = 'Required'
                 }
-                if (!values.email) {
-                  errors.email = 'Required'
+                if (!values.location) {
+                  errors.location = 'Required'
                 }
                 if (!values.symptoms) {
                   errors.symptoms = 'Required'
@@ -85,11 +84,12 @@ export default function Form() {
 
                 if (!values.phoneNo) {
                   errors.phoneNo = 'Required'
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = 'Invalid email address'
-                }
+                } 
+                // else if (
+                //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                // ) {
+                //   errors.email = 'Invalid email address'
+                // }
                 return errors
               }}
               onSubmit={(values, { setSubmitting }) => {
@@ -116,6 +116,7 @@ export default function Form() {
                   }
                 )
                 setSubmitting(false)
+                // console.log('values', values)
               }}
             >
               {({
@@ -185,7 +186,7 @@ export default function Form() {
                   <div className="mt-4">
                     <input
                       onChange={handleChange}
-                      onBlur={handleBlur}
+                      // onBlur={handleBlur}
                       name="email"
                       value={values.email}
                       type="email"
@@ -194,8 +195,24 @@ export default function Form() {
                       role="input"
                       className="font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
                     />
-                    <div className="text-sm text-red-600">
+                    {/* <div className="text-sm text-red-600">
                       {errors.email && touched.email && errors.email}
+                    </div> */}
+                  </div>
+                  <div className="mt-4">
+                    <input
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      name="location"
+                      value={values.location}
+                      type="text"
+                      placeholder="location"
+                      aria-label="add location"
+                      role="input"
+                      className="font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
+                    />
+                    <div className="text-sm text-red-600">
+                      {errors.location && touched.location && errors.location}
                     </div>
                   </div>
                   <div className="mt-4">
@@ -216,9 +233,9 @@ export default function Form() {
                         </span>
                       </label>
                     </div>
-                    <div className="text-sm text-red-600">
+                    {/* <div className="text-sm text-red-600">
                       {errors.gender && touched.gender && errors.gender}
-                    </div>
+                    </div> */}
                   </div>
                   <div className="mt-4">
                     <span className="font-md text-sm leading-none text-gray-600">
@@ -260,7 +277,7 @@ export default function Form() {
                         />
 
                         <span className="text-sm text-gray-500">
-                          Telemedicine (video/call/chat) - 500/-
+                          Telemedicine (video/call/chat)
                         </span>
                       </label>
                       <label className="ml-2 flex items-center space-x-2">
@@ -271,7 +288,7 @@ export default function Form() {
                         />
 
                         <span className=" text-sm text-gray-500">
-                          Home Doctor - 1200/-
+                          Home Doctor
                         </span>
                       </label>
                       <div className="text-sm text-red-600">
