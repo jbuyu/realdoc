@@ -1,30 +1,31 @@
 const servicesArray = [
   {
     id: 0,
-    icon: '/consul.svg',
-    title: 'General Consultations',
-    description:
-      'Source Medical consultations from our team of medical professionals.',
-  },
-  {
-    id: 1,
     icon: '/homecare.svg',
     title: 'Homedoctor Services',
     description:
       'Our doctors are flexible and will readily get to your location.',
   },
   {
+    id: 1,
+    icon: '/consul.svg',
+    title: 'Refferal and Linkage',
+    description:
+      'We link you to leading specialists and offer prompt refferal to your hospital of choice.',
+  },
+  {
     id: 2,
     icon: '/homenurse.svg',
     title: 'Home based Nursing Care',
     description:
-      "Our nurses are always on standby to offer Home based services when called upon",
+      'Our nurses are always on standby to offer Home based services.',
   },
   {
     id: 3,
     icon: '/laboratory.svg',
     title: 'Laboratory',
-    description: 'We have modern laboratories for tests  and  prompt results.',
+    description:
+      'We partner with leading laboratories for tests and prompt results relayed at the comfort of your home.',
   },
   {
     id: 4,
@@ -38,6 +39,13 @@ const servicesArray = [
     title: 'Physiotherapy',
     description:
       'We have specialists who will put you on a fast track to recovery.',
+  },
+  {
+    id: 6,
+    icon: '/antnetal.png',
+    title: 'Home based Antenatal care',
+    description:
+      'We bring your antenatal clinic to your home and walk you through the 9 months journey.',
   },
 ]
 
@@ -87,7 +95,7 @@ const testimonialArray = [
     image: '/female.png',
     comment:
       "Amazing customer service. I'm impressed by how genuinely I was treated.",
-    name: 'Mercy',
+    name: 'Mercy Chelagat',
   },
   {
     id: 1,
@@ -95,23 +103,23 @@ const testimonialArray = [
     image: '/male.png',
     comment:
       'I received my chemotherapy results and got follow up consultations that were prompt.',
-    name: 'Andrew',
+    name: 'Andrew Mwita',
   },
   {
     id: 2,
     icon: '/quotes.svg',
     image: '/female.png',
     comment:
-      'We are trully living in the age of modern medicine judging by how good these services were.',
-    name: 'Auriel',
+      'We are trully living in the age of modern medicine judging by how good these services are.',
+    name: 'James Gitonga',
   },
   {
     id: 3,
     icon: '/quotes.svg',
     image: '/male.png',
     comment:
-      'Their telemedine offering really helped during my fieldwork days when I camped out in Botswana.',
-    name: 'Lanton',
+      'Their telemedine offering really helped during my fieldwork days when I camped out in Maasai Mara.',
+    name: 'Stacy Mokami',
   },
 ]
 

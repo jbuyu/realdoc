@@ -29,7 +29,7 @@ const NavBar = () => {
                 width={100}
                 src="/logo2.svg"
                 alt="Vercel Logo"
-                className="ml-2 h-14 "
+                className="ml-2 h-14"
               />
               <div className="hidden text-[#224E73] md:flex">
                 Star Homecare Services

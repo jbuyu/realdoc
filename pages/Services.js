@@ -4,7 +4,7 @@ import { servicesArray } from '../data'
 
 const Services = () => (
   <>
-    <SEO  title="Star Homecare Services" description="Our Services" />
+    <SEO title="Star Homecare Services" description="Our Services" />
     <div className="mx-auto flex max-w-7xl flex-col">
       <div className="mt-10 flex flex-col">
         <header className="font-md py-2 text-center font-mono text-3xl font-semibold text-[#224E73]">
@@ -17,12 +17,12 @@ const Services = () => (
           {servicesArray.map(({ id, icon, title, description }) => (
             <div
               key={id}
-              className="h-84 m-8 flex w-80 flex-col items-center  justify-center rounded-3xl p-4"
+              className="h-84 m-8 flex w-72 flex-col items-center  justify-center rounded-3xl p-4"
             >
               <div className="flex h-56 w-56 items-center justify-center rounded-xl bg-gray-50 ">
                 <Image src={icon} width={124} height={124} layout="fixed" />
               </div>
-              <div className="p-1 text-lg font-semibold text-[#224E73]">
+              <div className="p-1 text-center text-lg font-semibold text-[#224E73]">
                 {title}
               </div>
               <div className=" text-md flex w-60 overflow-hidden whitespace-normal text-center text-sm font-medium text-slate-600">

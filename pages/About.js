@@ -7,49 +7,93 @@ const About = () => (
     <SEO title="About us" description="About Star Homecare Services" />
     <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
       <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
-        <div className="">
+        <div className=" w-3/5">
           <Image
-            src="/docparade.jpeg"
+            src="/docall.jpg"
             alt=""
-            className="w-full rounded-3xl object-cover object-center shadow-md"
-            width={448}
-            height={296}
+            className="w-full rounded-2xl object-cover object-center shadow-md"
+            width={520}
+            height={310}
             layout="fixed"
             priority="true"
           />
         </div>
-        <div className="item-center mt-10 flex h-full w-1/2 flex-col justify-center md:mt-0">
+        <div className="item-center mt-10 flex h-full w-3/5 flex-col justify-center md:mt-0">
           <div className="item-start flex w-full text-2xl font-extrabold text-[#224E73]">
-            Commitment to homecare
+            About us
           </div>
           <div className="py-8 text-slate-600">
-            We take our work seriously; our team of doctors offer consultations,
-            preventative care and therapeutic advice at your doorstep. Alongside
-            helping you during your recovery process, we are here to make sure
-            you stay healthy in the long run.
+            Star Homecare Services Limited is a registered Kenyan Company that
+            offers home based health services including but not limited to
+            diagnostic services, rehabilitative services, nursing services,
+            doctor consultations and nutritional services.
           </div>
         </div>
       </div>
       <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
-        <div className="flex h-full w-1/2 flex-col items-center justify-center">
+        <div className="flex h-full w-3/5 flex-col items-center justify-center">
           <div className="item-start mt-32 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
             Prompt results &amp; fast feedback
           </div>
           <div className="py-8 text-slate-600">
-            Your health is very important to us. We'll dispatch a doctor best
-            suited for your conditio. They have a modern state of the art
-            laboratory at their disposal to bolster fast feedback. After their
+            Your health is very important to us. We have a wide range of doctors
+            fully backed with a state of the art laboratory. After their
             diagnosis, we'll stay in touch, offering guidelines and everything
-            necesary through your recovery journey.
+            necesary throughout your recovery journey.
           </div>
         </div>
-        <div className="">
+        <div className="w-3/5">
           <Image
-            src="/doctorslab.jpeg"
+            src="/nurse-table.jpg"
             alt=""
-            className="w-full rounded-3xl object-cover object-center shadow-md"
-            width={448}
-            height={296}
+            className="w-full rounded-2xl object-cover object-center shadow-md"
+            width={520}
+            height={310}
+            layout="fixed"
+            priority
+          />
+        </div>
+      </div>
+
+      <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
+        <div className="w-3/5">
+          <Image
+            src="/syrange.jpg"
+            alt=""
+            className="w-full rounded-2xl object-cover object-center shadow-md"
+            width={520}
+            height={310}
+            layout="fixed"
+            priority="true"
+          />
+        </div>
+        <div className="item-center mt-10 flex h-full w-3/5 flex-col justify-center md:mt-0">
+          <div className="item-start flex w-full text-2xl font-extrabold text-[#224E73]">
+            Mission
+          </div>
+          <div className="py-8 text-slate-600">
+            To provide quality, compassionate and safe medical services to
+            patients at the comfort of their home.
+          </div>
+        </div>
+      </div>
+      <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
+        <div className="flex h-full w-3/5 flex-col items-center justify-center">
+          <div className="item-start mt-32 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
+            Vision
+          </div>
+          <div className="py-8 text-slate-600">
+            To become a leader in telemedicine and homebased medical service
+            provision in Kenya.
+          </div>
+        </div>
+        <div className="w-3/5">
+          <Image
+            src="/patient-lie.jpg"
+            alt=""
+            className="w-full rounded-2xl object-cover object-center shadow-md"
+            width={520}
+            height={310}
             layout="fixed"
             priority
           />
@@ -63,7 +107,7 @@ const About = () => (
           {testimonialArray.map(({ id, icon, comment, name, image }) => (
             <div
               key={id}
-              className="mt-8 flex h-60 w-80 flex-col justify-around rounded-3xl bg-[#EEF2FF] p-4 md:w-auto "
+              className="mt-8 flex h-60 w-80 flex-col justify-around rounded-2xl bg-[#EEF2FF] p-4 md:w-auto "
             >
               <Image src={icon} alt="" width={20} height={20} layout="fixed" />
               <div>{comment}</div>
