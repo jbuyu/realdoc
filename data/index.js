@@ -1,37 +1,39 @@
 const servicesArray = [
   {
     id: 0,
-    icon: '/homecare.svg',
-    title: 'Homedoctor Services',
+    icon: '/homenurse.svg',
+    title: 'Home based Nursing Care',
     description:
-      'Our doctors are flexible and will readily get to your location.',
+      'We offer homebased nursing services including round the clock nursing of chronically ill patients, wound cleaning & dressing, adminstration of scheduled medicines.',
   },
   {
     id: 1,
+    icon: '/laboratory.svg',
+    title: 'Laboratory',
+    description:
+      'We partner with leading laboratories to have your blood tests done and results relayed promptly at the comfort of your home.',
+  },
+  {
+    id: 2,
+    icon: '/homecare.svg',
+    title: 'Homedoctor Services',
+    description:
+      'Have a doctor visit you for a home consultation or book a phone/video call consultation.',
+  },
+  {
+    id: 3,
     icon: '/consul.svg',
     title: 'Refferal and Linkage',
     description:
       'We link you to leading specialists and offer prompt refferal to your hospital of choice.',
   },
-  {
-    id: 2,
-    icon: '/homenurse.svg',
-    title: 'Home based Nursing Care',
-    description:
-      'Our nurses are always on standby to offer Home based services.',
-  },
-  {
-    id: 3,
-    icon: '/laboratory.svg',
-    title: 'Laboratory',
-    description:
-      'We partner with leading laboratories for tests and prompt results relayed at the comfort of your home.',
-  },
+
   {
     id: 4,
     icon: '/nutrition.svg',
     title: 'Nutrition',
-    description: 'We offer customized diet plans, for all our patient.',
+    description:
+      'Our nutritionists will offer customized diet plans that suit your unique nutritional needs.',
   },
   {
     id: 5,
