@@ -7,7 +7,7 @@ const About = () => (
     <SEO title="About us" description="About Star Homecare Services" />
     <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
       <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
-        <div className=" w-3/5">
+        <div className=" md:w-3/5">
           <Image
             src="/docall.jpg"
             alt=""
@@ -30,19 +30,18 @@ const About = () => (
           </div>
         </div>
       </div>
-      <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
+      <div className="mt-64 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
         <div className="flex h-full w-3/5 flex-col items-center justify-center">
           <div className="item-start mt-32 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
             Prompt results &amp; fast feedback
           </div>
           <div className="py-8 text-slate-600">
-            Your health is very important to us. We have a wide range of doctors
-            fully backed with a state of the art laboratory. After their
-            diagnosis, we'll stay in touch, offering guidelines and everything
-            necesary throughout your recovery journey.
+            We have a wide range of doctors fully backed with a state of the art
+            laboratory. After diagnosis, we'll stay in touch, offering
+            guidelines throughout the recovery journey.
           </div>
         </div>
-        <div className="w-3/5">
+        <div className="md:w-3/5">
           <Image
             src="/nurse-table.jpg"
             alt=""
@@ -56,7 +55,7 @@ const About = () => (
       </div>
 
       <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
-        <div className="w-3/5">
+        <div className="mt-32 md:w-3/5">
           <Image
             src="/syrange.jpg"
             alt=""
@@ -79,7 +78,7 @@ const About = () => (
       </div>
       <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
         <div className="flex h-full w-3/5 flex-col items-center justify-center">
-          <div className="item-start mt-32 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
+          <div className="item-start mt-16 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
             Vision
           </div>
           <div className="py-8 text-slate-600">
@@ -87,7 +86,7 @@ const About = () => (
             provision in Kenya.
           </div>
         </div>
-        <div className="w-3/5">
+        <div className="md:w-3/5">
           <Image
             src="/patient-lie.jpg"
             alt=""
@@ -99,7 +98,7 @@ const About = () => (
           />
         </div>
       </div>
-      <div className="mt-36 flex w-full flex-col items-start justify-start md:mt-8">
+      <div className="mt-12 flex w-full flex-col items-start justify-start md:mt-8">
         <div className="mt-24 flex w-full justify-center py-4 text-2xl font-extrabold text-[#224E73] md:mt-0 ">
           Feedback &amp; Testimonials
         </div>
