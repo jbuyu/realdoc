@@ -81,7 +81,7 @@ const About = () => (
             Vision
           </div>
           <div className="py-8 text-slate-600">
-            To become a leader in telemedicine and homebased medical service
+            To become a leader in effective  telemedicine and homebased medical service
             provision in Kenya.
           </div>
         </div>
