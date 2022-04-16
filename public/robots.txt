@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.starhomecareservices.com
+
+# Sitemaps
+Sitemap: https://www.starhomecareservices.com/sitemap.xml
