@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 const Choice = () => (
   <div className="mx-auto max-w-9xl bg-cover bg-no-repeat pt-8 md:bg-[url('/bgpattern1.svg')] md:pt-0">
@@ -27,7 +28,7 @@ const Choice = () => (
           <div className=" flex-start flex ">
             <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
               <div className="flex flex-col items-center justify-center">
-                <img src="/professional.png" alt="" className="w-72" />
+                <Image src="/professional.png" width={264} height={264} />
                 <div className="font-semibold">24/7 Patient Support </div>
               </div>
             </div>
@@ -37,7 +38,7 @@ const Choice = () => (
           <div className="flex items-end justify-items-end">
             <div className=" max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
               <div className="flex  flex-col items-center justify-center ">
-                <img src="/caring.png" alt="" className="w-72" />
+                <Image src="/caring.png" width={264} height={264} />
                 <div className="font-semibold">Prompt results & analysis</div>
               </div>
             </div>
@@ -47,7 +48,7 @@ const Choice = () => (
           <div className="flex-start flex">
             <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
               <div className="flex flex-col items-center justify-center ">
-                <img src="/notes.png" alt="" className="w-72" />
+                <Image src="/notes.png" width={264} height={264} />
                 <div className="font-semibold">Proffesional Doctors</div>
               </div>
             </div>
@@ -60,7 +61,7 @@ const Choice = () => (
         <div className=" flex-start flex ">
           <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
             <div className="flex flex-col items-center justify-center">
-              <img src="/professional.png" alt="" className="w-72" />
+              <Image src="/professional.png" width={264} height={264} />
               <div className="font-semibold">24/7 Patient Support </div>
             </div>
           </div>
@@ -70,7 +71,7 @@ const Choice = () => (
         <div className="flex items-end justify-items-end">
           <div className=" max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
             <div className="flex  flex-col items-center justify-center ">
-              <img src="/caring.png" alt="" className="w-72" />
+              <Image src="/caring.png" width={264} height={264} />
               <div className="font-semibold">Prompt results & analysis</div>
             </div>
           </div>
@@ -80,7 +81,7 @@ const Choice = () => (
         <div className="flex-start flex">
           <div className="block max-w-sm cursor-pointer rounded-lg bg-white p-6 shadow-lg transition ease-in-out hover:scale-110">
             <div className="flex flex-col items-center justify-center ">
-              <img src="/notes.png" alt="" className="w-72" />
+              <Image src="/notes.png" width={264} height={264} />
               <div className="font-semibold">Proffesional Doctors</div>
             </div>
           </div>

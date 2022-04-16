@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Footer = () => (
   <div
@@ -8,7 +9,7 @@ const Footer = () => (
   >
     <Link href="/">
       <div className=" h-100 hidden w-1/5 cursor-pointer items-center space-x-4 md:flex ">
-        <img src="/adonis.svg" alt="Vercel Logo" className="ml-2 h-12 " />
+        <Image src="/logo2.svg" alt="Vercel Logo" width={96} height={96} />
         <div className="hidden font-semibold md:flex  ">
           Star Homecare Services
         </div>
@@ -32,34 +33,34 @@ const Footer = () => (
         </div>
         <div className="flex justify-around px-4 text-center md:w-full  md:justify-between md:px-0  ">
           <a className="w-8 md:w-12" href="www.facebook.com">
-            <img src="/facebook.svg" alt="" />
+            <Image src="/facebook.svg" width={56} height={56} />
           </a>
           <a className="w-8 md:w-12" href="www.twitter.com">
-            <img src="/twitter.svg" alt="" />
+            <Image src="/twitter.svg" width={56} height={56} />
           </a>
           <a className="w-8 md:w-12" href="www.linkedin.com">
-            <img src="/linkedin.svg" alt="" />
+            <Image src="/linkedin.svg" width={56} height={56} />
           </a>
           <a className="w-8 md:w-12" href="www.instagram.com">
-            <img src="/insta.svg" alt="" />
+            <Image src="/insta.svg" width={56} height={56} />
           </a>
         </div>
       </div>
     </div>
     <div className="hidden h-full w-1/5 flex-col justify-evenly md:flex">
       <div className="flex items-center justify-center md:justify-start">
-        <img className="w-8" src="/email.svg" alt="" />
+        <Image className="w-8" src="/email.svg" width={36} height={36}/>
         <div className="hidden pl-4 md:flex">
           <a href="mailto:starhomecareservice1@gmail.com">Contact</a>
         </div>
       </div>
       <div className="flex items-center justify-center md:justify-start ">
-        <img className="w-8" src="/location.svg" alt="" />
+        <Image className="w-8" src="/location.svg"  width={36} height={36} />
         <div className="hidden pl-4 md:flex">Nairobi</div>
       </div>
 
       <div className="flex items-center justify-center md:justify-start ">
-        <img className="w-8" src="/phone.svg" alt="" />
+        <Image className="w-8" src="/phone.svg"  width={36} height={36} />
         <div className="hidden pl-4 md:flex">+254700456768</div>
       </div>
     </div>
