@@ -6,8 +6,8 @@ const About = () => (
   <>
     <SEO title="About us" description="About Star Homecare Services" />
     <div className="mx-auto flex max-w-7xl flex-col items-center font-mono">
-      <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
-        <div className=" md:w-3/5">
+      <div className="mt-40 mb-10 md:mb-0 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
+        <div className="flex h-full items-center md:w-3/5">
           <Image
             src="/docall.jpg"
             alt=""
@@ -30,9 +30,9 @@ const About = () => (
           </div>
         </div>
       </div>
-      <div className="mt-64 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
+      <div className="mt-96 flex h-96 flex-col-reverse items-center justify-between py-4 md:mt-12 md:flex-row">
         <div className="flex h-full w-3/5 flex-col items-center justify-center">
-          <div className="item-start mt-32 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
+          <div className="item-start mt-12 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
             Prompt results &amp; fast feedback
           </div>
           <div className="py-8 text-slate-600">
@@ -41,7 +41,7 @@ const About = () => (
             guidelines throughout the recovery journey.
           </div>
         </div>
-        <div className="md:w-3/5">
+        <div className="flex h-full items-center justify-end md:w-3/5">
           <Image
             src="/nurse-table.jpg"
             alt=""
@@ -53,9 +53,8 @@ const About = () => (
           />
         </div>
       </div>
-
-      <div className="mt-40 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
-        <div className="mt-32 md:w-3/5">
+      <div className="mt-12 flex h-96 flex-col items-center justify-around py-4 px-4 md:mt-12 md:flex-row">
+        <div className="mt-32 flex h-full  items-center md:mt-0 md:w-3/5">
           <Image
             src="/syrange.jpg"
             alt=""
@@ -76,9 +75,9 @@ const About = () => (
           </div>
         </div>
       </div>
-      <div className="mt-80 flex h-96 flex-col-reverse items-center justify-around py-4 md:mt-12 md:flex-row ">
+      <div className="mt-96 flex h-96 flex-col-reverse items-center justify-between py-4 md:mt-12 md:flex-row">
         <div className="flex h-full w-3/5 flex-col items-center justify-center">
-          <div className="item-start mt-16 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
+          <div className="item-start mt-12 flex w-full text-2xl font-extrabold text-[#224E73] md:mt-0">
             Vision
           </div>
           <div className="py-8 text-slate-600">
@@ -86,7 +85,7 @@ const About = () => (
             provision in Kenya.
           </div>
         </div>
-        <div className="md:w-3/5">
+        <div className="flex h-full items-center justify-end md:w-3/5">
           <Image
             src="/patient-lie.jpg"
             alt=""
@@ -99,7 +98,7 @@ const About = () => (
         </div>
       </div>
       <div className="mt-12 flex w-full flex-col items-start justify-start md:mt-8">
-        <div className="mt-24 flex w-full justify-center py-4 text-2xl font-extrabold text-[#224E73] md:mt-0 ">
+        <div className="mt-2 flex w-full justify-center py-4 text-2xl font-extrabold text-[#224E73] md:mt-0 ">
           Feedback &amp; Testimonials
         </div>
         <div className="mt-2 flex w-full flex-col items-center justify-center space-x-0  md:mt-12 md:flex-row md:space-x-10 ">
