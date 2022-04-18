@@ -7,9 +7,9 @@ const Services = () => (
     <SEO title="Services" description="Our Services" />
     <div className="mx-auto flex max-w-7xl flex-col">
       <div className="mt-10 flex flex-col">
-        <header className="font-md py-2 text-center font-mono text-3xl font-semibold text-[#224E73]">
-          Our Services
-        </header>
+        <h1 className="font-md py-2 text-center font-mono text-3xl font-semibold text-[#224E73]">
+          Star Homecare Services
+        </h1>
         <div className=" py-4  text-center text-xl text-slate-600 ">
           We provide state of the art medical care for all our patients.
         </div>

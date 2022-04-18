@@ -19,9 +19,9 @@ const About = () => (
           />
         </div>
         <div className="item-center mt-10 flex h-full w-3/5 flex-col justify-center md:mt-0">
-          <div className="item-start flex w-full text-2xl font-extrabold text-[#224E73]">
-            About us
-          </div>
+          <h1 className="item-start flex w-full text-2xl font-extrabold text-[#224E73]">
+            About Star Homecare Services
+          </h1>
           <div className="py-8 text-slate-600">
             Star Homecare Services Limited is a registered Kenyan Company that
             offers home based health services including but not limited to
