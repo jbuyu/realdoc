@@ -2,10 +2,10 @@ import axios from 'axios'
 import { Field, Formik } from 'formik'
 import Image from 'next/image'
 import { useState } from 'react'
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+
 import toast, { Toaster } from 'react-hot-toast'
 import { format, compareAsc } from 'date-fns'
+import FormDatePicker from '../components/FormDatePicker'
 
 export default function Form() {
   //spinner css
@@ -58,7 +58,7 @@ export default function Form() {
                 lastName: '',
                 phoneNo: '',
                 gender: '',
-                dateOfBirth: format(new Date(startDate), 'MM/dd/yyyy'),
+                dateOfBirth: '',
                 symptoms: '',
                 consultationType: '',
               }}
@@ -92,7 +92,7 @@ export default function Form() {
                 // }
                 return errors
               }}
-              onSubmit={(values, { setSubmitting }) => {
+              onSubmit={(values, { setSubmitting }, setFieldValue) => {
                 setLoading(true)
                 axios.post(`${API_URL}`, values).then(
                   (response) => {
@@ -241,11 +241,12 @@ export default function Form() {
                     <span className="font-md text-sm leading-none text-gray-600">
                       Date of Birth
                     </span>
-                    <DatePicker
-                      selected={startDate}
-                      onChange={(date) => setStartDate(date)}
+                    {/* <DatePicker
+                      value={values.dateOfBirth}
+                      onChange={setFieldValue}
                       className="font-sm rounded-md bg-gray-200 p-2 text-sm text-black outline-none"
-                    />
+                    /> */}
+                     <FormDatePicker />
                   </div>
                   <div className="mt-4 flex flex-col">
                     <span className="font-md py-2 text-sm leading-none text-gray-600">
