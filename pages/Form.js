@@ -5,6 +5,7 @@ import { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import toast, { Toaster } from 'react-hot-toast'
+import { format, compareAsc } from 'date-fns'
 
 export default function Form() {
   //spinner css
@@ -57,7 +58,7 @@ export default function Form() {
                 lastName: '',
                 phoneNo: '',
                 gender: '',
-                dateOfBirth: startDate,
+                dateOfBirth: format(new Date(startDate), 'MM/dd/yyyy'),
                 symptoms: '',
                 consultationType: '',
               }}
@@ -81,10 +82,9 @@ export default function Form() {
                 if (!values.consultationType) {
                   errors.consultationType = 'Required'
                 }
-
-                if (!values.phoneNo) {
-                  errors.phoneNo = 'Required'
-                } 
+                if (values.phoneNo && !values.phoneNo.match(/^\d{10}$/)) {
+                  errors.phoneNo = 'Phone Invalid'
+                }
                 // else if (
                 //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                 // ) {
@@ -173,7 +173,7 @@ export default function Form() {
                       onBlur={handleBlur}
                       value={values.phoneNo}
                       name="phoneNo"
-                      placeholder="Phone"
+                      placeholder="07..."
                       aria-label="enter email address"
                       role="input"
                       type="tel"

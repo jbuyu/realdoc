@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Choice = () => (
   <div className="mx-auto max-w-9xl bg-cover bg-no-repeat pt-8 md:bg-[url('/bgpattern1.svg')] md:pt-0">
     <div className="bg-[url('/lightblob.svg ')]bg-center flex items-center justify-between ">
-      <div className="md:pd-0 relative flex flex-col pl-2 md:w-3/5 md:items-center md:justify-center mt-8 md:mt-0 ">
+      <div className="md:pd-0 relative mt-8 flex flex-col pl-2 md:mt-0 md:w-3/5 md:items-center md:justify-center ">
         <div className="text-xl font-extrabold text-[#224E73] md:w-2/3 md:text-2xl">
           Why Choose Our Services
         </div>
@@ -16,7 +16,7 @@ const Choice = () => (
           quality medical care at the comfort of your home.
         </div>
         <div className="flex justify-center pt-8 md:w-2/3 md:justify-start md:pt-4 ">
-          <button className="hover:-translate-1 inline-flex rounded bg-indigo-500 py-2 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-700">
+          <button className="hover:-translate-1 inline-flex w-2/5 justify-center rounded bg-indigo-500 py-2 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-700 md:w-1/4">
             <Link href="/Services">
               <span>Learn more</span>
             </Link>
