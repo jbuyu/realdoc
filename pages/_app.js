@@ -8,26 +8,32 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <SEO
-        title="Star Homecare Services"
+        title="Best Online Doctor Consultation in Kenya - Star Homecare Services"
         description="Offering online medical health services in kenya"
         icon="/favicon.ico"
         keywords={[
-          'Kenyan Doctor',
-          'Kenya doctor help',
-          'Consult doctor Kenya',
-          'Online medical consultation',
-          'Best online consultation kenya',
+          'kenyan Doctor online',
+          'best kenya doctor help',
+          'telemedicine in kenya',
+          'best consult doctor Kenya',
+          'best online medical consultation kenya',
+          'best online consultation kenya',
+          'best home based nursing Care in kenya',
+          'best homedoctors Services in kenya',
+          'best nutritionist in kenya online',
+          'best physiotherapy in kenya',
+          'best home based antenatal care in kenya',
         ]}
         facebook={{
-          image: "/favicon.png",
-          url: "https://www.starhomecareservices.com/",
-          type: "website",
-      }}
-      twitter={{
-          image: "/favicon.png",
-          site: "https://www.starhomecareservices.com/",
-          card: "summary",
-      }}
+          image: '/favicon.png',
+          url: 'https://www.starhomecareservices.com/',
+          type: 'website',
+        }}
+        twitter={{
+          image: '/favicon.png',
+          site: 'https://www.starhomecareservices.com/',
+          card: 'summary',
+        }}
       />
       <Component {...pageProps} />
     </Layout>
