@@ -25,12 +25,12 @@ function MyApp({ Component, pageProps }) {
           'best home based antenatal care in kenya',
         ]}
         facebook={{
-          image: '/favicon.png',
+          image: 'https://www.starhomecareservices.com/favicon.png',
           url: 'https://www.starhomecareservices.com/',
           type: 'website',
         }}
         twitter={{
-          image: '/favicon.png',
+          image: 'https://www.starhomecareservices.com/favicon.png',
           site: 'https://www.starhomecareservices.com/',
           card: 'summary',
         }}
