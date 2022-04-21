@@ -32,7 +32,7 @@ const Footer = () => (
           Get In Touch
         </div>
         <div className="mt-2 flex justify-around px-4 text-center  md:w-full md:justify-between md:px-0  ">
-          <a className="w-8 md:w-12" href="www.facebook.com">
+          <a target="_blank" className="w-8 md:w-12" href="https://www.facebook.com/Star-Homecare-Services-Limited-101471109213221/">
             <Image src="/facebook.svg" width={56} height={56} />
           </a>
           <a className="w-8 md:w-12" href="www.twitter.com">
