@@ -2,11 +2,13 @@
 import SEO from '@bradgarropy/next-seo'
 import Layout from '../components/Layout'
 import '../styles/globals.css'
+import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }) {
   // console.log('node-env', )
   return (
     <Layout>
+      {/* <meta name="google-site-verification" content="FhVf9TxdCB_6MbbS4MujQBTHOIqVae7ugxbsTcCsSlE" />
       <SEO
         title="Best Online Doctor Consultation in Kenya - Star Homecare Services"
         description="Offering online medical health services in kenya"
@@ -34,7 +36,8 @@ function MyApp({ Component, pageProps }) {
           site: 'https://www.starhomecareservices.com/',
           card: 'summary',
         }}
-      />
+      /> */}
+      <Header />
       <Component {...pageProps} />
     </Layout>
   )
