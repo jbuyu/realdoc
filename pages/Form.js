@@ -239,14 +239,30 @@ export default function Form() {
                   </div>
                   <div className="mt-4">
                     <span className="font-md text-sm leading-none text-gray-600">
-                      Date of Birth
+                      Age
                     </span>
                     {/* <DatePicker
                       value={values.dateOfBirth}
                       onChange={setFieldValue}
                       className="font-sm rounded-md bg-gray-200 p-2 text-sm text-black outline-none"
                     /> */}
-                     <FormDatePicker />
+                    {/* <FormDatePicker /> */}
+                    <div className="mt-4 w-1/4">
+                      <input
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        name="dateOfBirth"
+                        value={values.dateOfBirth}
+                        type="number"
+                        placeholder="age"
+                        aria-label="age"
+                        role="input"
+                        className="font-sm mt-2 w-full rounded border bg-gray-200 py-3 pl-3 text-sm leading-none text-gray-800 focus:outline-none"
+                      />
+                      {/* <div className="text-sm text-red-600">
+                        {errors.location && touched.location && errors.location}
+                      </div> */}
+                    </div>
                   </div>
                   <div className="mt-4 flex flex-col">
                     <span className="font-md py-2 text-sm leading-none text-gray-600">
